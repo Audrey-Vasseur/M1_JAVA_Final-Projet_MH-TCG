@@ -1,17 +1,28 @@
 package com.junia;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+import io.javalin.Javalin;
+import io.javalin.http.staticfiles.Location;
+import io.javalin.http.Context;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+public class Main {
+    public static void main(String[] args) {
+        var app = Javalin.create(config -> {
+            config.staticFiles.add(staticFiles -> {
+                staticFiles.directory = "web";
+                staticFiles.location = Location.CLASSPATH;});
+
+            config.routes.get("/api/test", ctx ->
+                    ctx.result("Connexion au serveur réussie"));
+        }).start(7070);
     }
+
+//            config.staticFiles.add(staticFiles -> {
+//            staticFiles.directory = "web";
+//            staticFiles.location = Location.CLASSPATH;
+//            });
+//        }).start(7070);
+//
+//        app.get("/api/test", (Context ctx) -> ctx.result("Connexion au serveur Java réussie"));
+//        }
+
 }

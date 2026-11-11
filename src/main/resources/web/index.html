@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Trading Cards Game based on Monster Hunter">
+        <meta name="author" content="Audrey V">
+        <meta name="keywords" content="monster, hunter, tcg, card, game">
+        <link rel="icon" href="icons/MH_Icon1.png">
+        <title>Monster Hunter TCG</title>
+    </head>
+    <body>
+        <h1>Plateau de Jeu</h1>
+        <img src="cards/nargacuga.png">
+        <br>
+
+        <button onclick="testerServeur()">Tester le backend Java</button>
+
+        <script>
+            async function testerServeur(){
+                const answer = await fetch('/api/test');
+                const text = await answer.text();
+                alert(text);
+            }
+        </script>
+
+    </body>
+</html>
