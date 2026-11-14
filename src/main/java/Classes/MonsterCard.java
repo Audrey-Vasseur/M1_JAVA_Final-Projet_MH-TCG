@@ -1,28 +1,30 @@
 package Classes;
 
+import Classes.Enum.Element;
+import Classes.Enum.Token;
+import java.util.ArrayList;
+
 abstract class MonsterCard {
-    private int ID;
     protected String name;
     protected int HP;
-    protected String weakness;
+    protected int maxHP;
+    protected Element weakness;
     protected int retreatCost;
     protected int rarity;
+    protected ArrayList<Token> tokens;
 
     // To create a basic card with no attacks (they'll be created for each monster directly)
-    public MonsterCard(String name, int HP, String weakness, int retreatCost, int rarity){
+    public MonsterCard(String name, int maxHP, Element weakness, int retreatCost, int rarity){
         this.name = name;
-        this.HP = HP;
-        this.weakness = weakness ;
+        this.HP = maxHP;
+        this.maxHP = maxHP;
+        this.weakness = weakness;
         this.retreatCost = retreatCost ;
         this.rarity = rarity;
-        //à modifier pour que l'id soit différent si on a 2 fois le même type de carte
-        ID = 0;
+        this.tokens = new ArrayList<Token>();
     }
 
     // Getters
-    protected int getID(){
-        return ID;
-    }
 
     public String getName() {
         return name;
@@ -32,7 +34,7 @@ abstract class MonsterCard {
         return HP;
     }
 
-    public String getWeakness() {
+    public Element getWeakness() {
         return weakness;
     }
     
@@ -48,7 +50,7 @@ abstract class MonsterCard {
     public void setHP(int HP) {
         this.HP = HP;
     }
-    protected void setWeakness(String weakness){
+    protected void setWeakness(Element weakness){
         this.weakness = weakness;
     }
 
@@ -66,22 +68,61 @@ abstract class MonsterCard {
     Methods for all Monsters
       I. loseHP
       II. recoverHP
-      III. afflicted --> affected by something (poison, fire etc)
+      III. monsterRetreat
+      IV. blight --> affected by something (poison, fire etc)
 
     */
 
-    public int loseHP(int damageReceived) {
-        int health = getHP();
-        health = health - damageReceived;
-        setHP(health);
-        return HP;
+    public int loseHP(int damageReceived, Element element) {
+        if(this.weakness == element){
+            damageReceived+=20;
+        }
+        HP -=damageReceived;
+        return damageReceived;
     }
 
     public int recoverHP(int HPReceived){
-        int health = getHP();
-        health = health + HPReceived;
-        setHP(health);
-        return HP;
+        HP += HPReceived;
+        return HPReceived;
     }
 
+    public int retreatCostCalcul(int retreatCost){
+        int realRetreatCost = retreatCost;
+        if(tokens.contains(Token.Iceblight)){
+            realRetreatCost +=1;
+        }
+        return realRetreatCost;
+    }
+
+    public void AddToken(Token token){
+        tokens.add(token);
+    }
+    public void AddToken(Token token, int number){
+        for (int i = 0; i < number; i++){
+            AddToken(token);
+        }
+    }
+
+    protected ArrayList<Element> ALBuilder(int fire, int water, int ice, int thunder, int dragon, int elementless){
+        ArrayList<Element> list = new ArrayList<>();
+        for (int i = 0; i < fire; i++){
+            list.add(Element.Fire);
+        }
+        for (int i = 0; i < water; i++){
+            list.add(Element.Water);
+        }
+        for (int i = 0; i < ice; i++){
+            list.add(Element.Ice);
+        }
+        for (int i = 0; i < thunder; i++){
+            list.add(Element.Thunder);
+        }
+        for (int i = 0; i < dragon; i++){
+            list.add(Element.Dragon);
+        }
+        for (int i = 0; i < fire; i++){
+            list.add(Element.Elementless);
+        }
+        return list;
+    }
 }

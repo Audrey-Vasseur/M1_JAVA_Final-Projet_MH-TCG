@@ -1,8 +1,9 @@
 package com.junia;
 
+import Classes.*;
+import Classes.Enum.*;
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
-import io.javalin.http.Context;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,6 +15,8 @@ public class Main {
             config.routes.get("/api/test", ctx ->
                     ctx.result("Connexion au serveur réussie"));
         }).start(7070);
+
+        Ajarakan ajarakan1 = new Ajarakan();
     }
 
 //            config.staticFiles.add(staticFiles -> {
