@@ -6,3 +6,8 @@
 <summary>More informations below</summary>
 <br>
 
+## II. Rules of the game
+
+<details>
+<summary>More informations below</summary>
+<br>
