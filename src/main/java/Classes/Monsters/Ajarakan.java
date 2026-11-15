@@ -1,53 +1,68 @@
 package Classes.Monsters;
 
 import Classes.Enum.Element;
+
+import java.util.ArrayList;
+
 import Classes.Enum.Token;
 import Classes.MonsterCard;
 import Classes.Player;
 
 public class Ajarakan extends MonsterCard {
-    private static final int firstAttackDamage = 30;
-    private static final int secondAttackDamage = 40;
-    private static final int thirdAttackDamage = 80;
 
     public Ajarakan(Player owner) {
         super("Ajarakan", owner);
     }
 
     // 1st attack: Power Punch
-    public int PowerPunch(MonsterCard enemy){
-        if(owner.useManaElement(Element.Elementless)) {
-            System.out.println("Ajarakan uses Power Punch!");
-            System.out.println("It deals " + firstAttackDamage + " damage to the opponent's Monster!");
-            return enemy.loseHP(firstAttackDamage, Element.Elementless);
+    public int Attack1(MonsterCard enemy){
+        ArrayList<String> attack = moves.get(0);
+        String attackName =  attack.get(0);
+        int attackDamage =  Integer.parseInt(attack.get(1));
+        ArrayList<Element> cost = buildFromList(attack);
+        Element elementType = defineAttackElementType(cost);
+
+        if(owner.useManaElement(cost)) {
+            System.out.println(attackToString(attackName, cost, attackDamage, elementType, enemy));
+            return enemy.loseHP(attackDamage, elementType);
         }else{
-            System.out.println("You don't have enough Elements to use Power Punch!");
+            System.out.println("You don't have enough Elements to use "+attackName+"!");
             return 0;
         }
     }
 
     // 2nd attack: Shoulder Ram --> apply 1 Blastblight Token
-    public int ShoulderRam(MonsterCard enemy){
-        if(owner.useManaElement(ALBuilder(2,0,0,0,0,1))) {
-            System.out.println("Ajarakan uses Shoulder Ram!");
-            System.out.println("It deals " + secondAttackDamage + " damage to the opponent's Monster!");
+    public int Attack2(MonsterCard enemy){
+        ArrayList<String> attack = moves.get(1);
+        String attackName =  attack.get(0);
+        int attackDamage =  Integer.parseInt(attack.get(1));
+        ArrayList<Element> cost = buildFromList(attack);
+        Element elementType = defineAttackElementType(cost);
+
+        if(owner.useManaElement(cost)) {
+            System.out.println(attackToString(attackName, cost, attackDamage, elementType, enemy));
             enemy.AddToken(Token.Blastblight);
-            return enemy.loseHP(secondAttackDamage, Element.Fire);
+            return enemy.loseHP(attackDamage, elementType);
         }else{
-            System.out.println("You don't have enough Elements to use Shoulder Ram!");
+            System.out.println("You don't have enough Elements to use "+attackName+"!");
             return 0;
         }
     }
 
     // 3rd attack: Blasting Star --> apply 2 Blastblight Token
-    public int BlastingStar(MonsterCard enemy){
-        if(owner.useManaElement(ALBuilder(2,0,0,0,0,2))) {
-            System.out.println("Ajarakan uses Blasting Star!");
-            System.out.println("It deals " + thirdAttackDamage + " damage to the opponent's Monster!");
+    public int Attack3(MonsterCard enemy){
+        ArrayList<String> attack = moves.get(2);
+        String attackName =  attack.get(0);
+        int attackDamage =  Integer.parseInt(attack.get(1));
+        ArrayList<Element> cost = buildFromList(attack);
+        Element elementType = defineAttackElementType(cost);
+
+        if(owner.useManaElement(cost)) {
+            System.out.println(attackToString(attackName, cost, attackDamage, elementType, enemy));
             enemy.AddToken(Token.Blastblight);
-            return enemy.loseHP(thirdAttackDamage, Element.Fire);
+            return enemy.loseHP(attackDamage, elementType);
         }else{
-            System.out.println("You don't have enough Elements to use Blasting Star!");
+            System.out.println("You don't have enough Elements to use "+attackName+"!");
             return 0;
         }
     }

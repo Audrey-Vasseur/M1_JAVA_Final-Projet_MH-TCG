@@ -2,31 +2,47 @@ package Classes.Monsters;
 
 import Classes.Enum.Element;
 import Classes.Enum.Token;
+
+import java.util.ArrayList;
+
 import Classes.MonsterCard;
 import Classes.Player;
 
 public class Aknosom extends MonsterCard {
-    private static final int firstAttackDamage = 20;
-    private static final int secondAttackDamage = 30;
-
     public Aknosom(Player owner) {
         super("Aknosom", owner);
     }
 
-    // 1st attack: Backward Kick
-    public int backwardKick(MonsterCard enemy){
-        System.out.println("Aknosom uses Backward Kick!");
-        System.out.println("It deals "+firstAttackDamage+" damage to the opponent's Monster!");
-        owner.useManaElement(Element.Elementless);
-        return enemy.loseHP(firstAttackDamage, Element.Elementless);
+    public int Attack1(MonsterCard enemy){
+        ArrayList<String> attack = moves.get(0);
+        String attackName =  attack.get(0);
+        int attackDamage =  Integer.parseInt(attack.get(1));
+        ArrayList<Element> cost = buildFromList(attack);
+        Element elementType = defineAttackElementType(cost);
+
+        if(owner.useManaElement(cost)) {
+            System.out.println(attackToString(attackName, cost, attackDamage, elementType, enemy));
+            return enemy.loseHP(attackDamage, elementType);
+        }else{
+            System.out.println("You don't have enough Elements to use "+attackName+"!");
+            return 0;
+        }
     }
 
-    // 2nd attack: Fire Ball
-    public int fireBall(MonsterCard enemy){
-        System.out.println("Aknosom uses Fire Ball!");
-        System.out.println("It deals "+secondAttackDamage+" damage to the opponent's Monster!");
-        owner.useManaElement(ALBuilder(2,0,0,0,0,0));
-        enemy.AddToken(Token.Fireblight);
-        return enemy.loseHP(secondAttackDamage, Element.Fire);
+    public int Attack2(MonsterCard enemy){
+        ArrayList<String> attack = moves.get(1);
+        String attackName =  attack.get(0);
+        int attackDamage =  Integer.parseInt(attack.get(1));
+        ArrayList<Element> cost = buildFromList(attack);
+        Element elementType = defineAttackElementType(cost);
+
+        if(owner.useManaElement(cost)) {
+            System.out.println(attackToString(attackName, cost, attackDamage, elementType, enemy));
+            enemy.AddToken(Token.Fireblight);
+            return enemy.loseHP(attackDamage, elementType);
+        }else{
+            System.out.println("You don't have enough Elements to use "+attackName+"!");
+            return 0;
+        }
     }
 }

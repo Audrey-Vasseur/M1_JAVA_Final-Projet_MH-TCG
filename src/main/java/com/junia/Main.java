@@ -1,38 +1,45 @@
 package com.junia;
 
-import Classes.CSV.CSVModel;
+import Classes.Board;
 import Classes.CSV.CSVReadException;
 import Classes.CSV.CSVService;
+import Classes.Card;
+import Classes.ConsumableCard;
+import Classes.Enum.Element;
 import Classes.Monsters.Ajarakan;
 import Classes.Monsters.Aknosom;
 import Classes.Player;
-import com.opencsv.CSVReader;
-import com.opencsv.bean.CsvToBeanBuilder;
 
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Scanner;
+
+import static Classes.Player.nobodyHasWon;
+
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException, CSVReadException {
-//        var app = Javalin.create(config -> {
-//            config.staticFiles.add(staticFiles -> {
-//                staticFiles.directory = "web";
-//                staticFiles.location = Location.CLASSPATH;});
-//
-//            config.routes.get("/api/test", ctx ->
-//                    ctx.result("Connexion au serveur réussie"));
-//        }).start(7070);
-
-
         try {
             CSVService.initialize();
+            Board board = new Board();          // creation of the board
+            ArrayList<Player> players = board.askPlayerName(2);
+            board.initGame(players.get(0),players.get(1));
 
-            Player player1 = new Player("Audrey");
-            Ajarakan ajarakan1 = new Ajarakan(player1);
-            Player player2 = new Player("Alex");
-            Aknosom aknosom1 = new Aknosom(player2);
+            int turnNumber = 1;
+            while(nobodyHasWon(players)) {
+                System.out.println("------- Turn "+ turnNumber + " ------ ");
+                System.out.println("- "+ players.get(0) + " -");
 
+
+
+                turnNumber++;
+            }
+            Ajarakan ajarakan1 = new Ajarakan(players.get(0));
+            Aknosom aknosom1 = new Aknosom(players.get(1));
+            players.get(0).addMana(Element.Elementless);
+            players.get(0).addMana(Element.Elementless);
+            players.get(0).addMana(Element.Fire);
+            players.get(0).addMana(Element.Fire);
             System.out.println("------------------------------------");
             System.out.println("Verification monsters attributes");
             System.out.println("name: "+ ajarakan1.getName());
@@ -40,8 +47,12 @@ public class Main {
             System.out.println("Weakness: "+ ajarakan1.getWeakness());
             System.out.println("RetreatCost: "+ ajarakan1.getRetreatCost());
             System.out.println("Rarity: "+ ajarakan1.getRarity());
-            System.out.println("1st attack: "+ ajarakan1.PowerPunch(aknosom1));
             System.out.println("Moves: "+ ajarakan1.getMoves());
+            // ajarakan1.Attack1(aknosom1);
+            // ajarakan1.Attack2(aknosom1);
+            System.out.println(players.get(0).getManaPool());
+            ajarakan1.Attack3(aknosom1);
+            System.out.println(players.get(0).getManaPool());
 //            System.out.println("2nd attack: "+ ajarakan1.ShoulderRam(aknosom1));
 //            System.out.println("3rd attack: "+ ajarakan1.BlastingStar(aknosom1));
             System.out.println("------------------------------------");
@@ -76,6 +87,7 @@ public class Main {
 //        player2.addToDeck(new Barioth(player2));
 //        player2.addToDeck(new JinDahaad(player2));
 //        player2.addToDeck(new JinDahaad(player2));
+//
 //        Board board = new Board();
 //        board.initGame(player1,player2);
 //        System.out.println("P2 deck: " + player2.CardtoString(player2.getDeck()));
@@ -89,26 +101,4 @@ public class Main {
 //            board.startTurn(player1);
 //        }
 //    }
-
-    /*
-    vérifier à chaque fin de tour si les cartes subissent des effets et agir en conséquence
-    changer de joueur en appuyant sur un bouton pour mettre fin à son tour
-    compter les tours
-    lors du changement de joueur, mettre un bouton qui permet de valider
-    à l'autre joueur que c'est bien lui qui joue et afficher sa main et ses objets dispo
-
-    comptabiliser les points pour condition de victoire
-    donner des points en fonction de la carte tuée
-     */
-
-
-//            config.staticFiles.add(staticFiles -> {
-//            staticFiles.directory = "web";
-//            staticFiles.location = Location.CLASSPATH;
-//            });
-//        }).start(7070);
-//
-//        app.get("/api/test", (Context ctx) -> ctx.result("Connexion au serveur Java réussie"));
-//        }
-
 }

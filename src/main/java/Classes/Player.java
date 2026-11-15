@@ -138,6 +138,16 @@ public class Player {
         System.out.println("You gained "+ point + " point!");
     }
 
+    public static boolean nobodyHasWon(ArrayList<Player> players){
+        for(Player player : players){
+            if(player.getPoints() < 4){
+                return false;
+            }
+        }
+        System.out.println("A player has won the game!");
+        return true;
+    }
+
     // Move a card from hand to board
     public void handToBoard(int index){
         board.add(hand.remove(index));

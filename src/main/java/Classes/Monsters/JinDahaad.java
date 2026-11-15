@@ -2,42 +2,65 @@ package Classes.Monsters;
 
 import Classes.Enum.Element;
 import Classes.Enum.Token;
+
+import java.util.ArrayList;
+
 import Classes.MonsterCard;
 import Classes.Player;
 
 public class JinDahaad extends MonsterCard {
-    private static final int firstAttackDamage = 40;
-    private static final int secondAttackDamage = 50;
-    private static final int thirdAttackDamage = 100;
-
     public JinDahaad(Player owner) {
         super("Jin Dahaad", owner);
     }
 
-    // 1st attack: Sweeping Breath
-    public int sweepingBreath(MonsterCard enemy){
-        System.out.println("Jin Dahaad uses Sweeping Breath!");
-        System.out.println("It deals "+firstAttackDamage+" damage to the opponent's Monster!");
-        owner.useManaElement(ALBuilder(0,0,0,2,0,0));
-        enemy.AddToken(Token.Iceblight);
-        return enemy.loseHP(firstAttackDamage, Element.Ice);
+    public int Attack1(MonsterCard enemy){
+        ArrayList<String> attack = moves.get(0);
+        String attackName =  attack.get(0);
+        int attackDamage =  Integer.parseInt(attack.get(1));
+        ArrayList<Element> cost = buildFromList(attack);
+        Element elementType = defineAttackElementType(cost);
+
+        if(owner.useManaElement(cost)) {
+            System.out.println(attackToString(attackName, cost, attackDamage, elementType, enemy));
+            enemy.AddToken(Token.Iceblight);
+            return enemy.loseHP(attackDamage, elementType);
+        }else{
+            System.out.println("You don't have enough Elements to use "+attackName+"!");
+            return 0;
+        }
     }
 
-    // 2nd attack: Body Slam
-    public int bodySlam(MonsterCard enemy){
-        System.out.println("Jin Dahaad uses Body Slam!");
-        System.out.println("It deals "+secondAttackDamage+" damage to the opponent's Monster!");
-        owner.useManaElement(ALBuilder(0,0,0,0,0,3));
-        enemy.AddToken(Token.KO);
-        return enemy.loseHP(secondAttackDamage, Element.Elementless);
+    public int Attack2(MonsterCard enemy){
+        ArrayList<String> attack = moves.get(1);
+        String attackName =  attack.get(0);
+        int attackDamage =  Integer.parseInt(attack.get(1));
+        ArrayList<Element> cost = buildFromList(attack);
+        Element elementType = defineAttackElementType(cost);
+
+        if(owner.useManaElement(cost)) {
+            System.out.println(attackToString(attackName, cost, attackDamage, elementType, enemy));
+            enemy.AddToken(Token.KO);
+            return enemy.loseHP(attackDamage, elementType);
+        }else{
+            System.out.println("You don't have enough Elements to use "+attackName+"!");
+            return 0;
+        }
     }
 
-    // 3rd attack: 
-    public int iceNova(MonsterCard enemy){
-        System.out.println("Jin Dahaad uses Ice Nova!");
-        System.out.println("It deals "+thirdAttackDamage+" damage to the opponent's Monster!");
-        owner.useManaElement(ALBuilder(0,0,0,5,0,0));
-        enemy.AddToken(Token.Iceblight);
-        return enemy.loseHP(thirdAttackDamage, Element.Ice);
+    public int Attack3(MonsterCard enemy){
+        ArrayList<String> attack = moves.get(2);
+        String attackName =  attack.get(0);
+        int attackDamage =  Integer.parseInt(attack.get(1));
+        ArrayList<Element> cost = buildFromList(attack);
+        Element elementType = defineAttackElementType(cost);
+
+        if(owner.useManaElement(cost)) {
+            System.out.println(attackToString(attackName, cost, attackDamage, elementType, enemy));
+            enemy.AddToken(Token.Iceblight);
+            return enemy.loseHP(attackDamage, elementType);
+        }else{
+            System.out.println("You don't have enough Elements to use "+attackName+"!");
+            return 0;
+        }
     }
 }

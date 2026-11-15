@@ -1,80 +1,80 @@
 subname,name,healthpoints,weakness,retreatCost,rarity,moves
 ,Agnaktor,90,Water,2,1,
 ,Ajarakan,90,Water,2,1,Power_Punch 30 1 Elementless/Shoulder_Ram 40 2 Fire 1 Elementless/Blasting_Star 80 2 Fire 2 Elementless
-,Aknosom,60,Water,2,1,Backward Kick 20 1 Elementless/Fire_Ball 30 2 Fire
-,Alatreon,400,,5,4,Escaton Judgement/Dragon_Blast 120 2 Dragon 1 Dragon/Thunder Rain 120 3 Thunder/Fire Beam 120 3 Fire/Ice Breath 120 3 Ice/Water Cannon 120 3 Water
-,Almudron,70,Fire,2,1,Compacted Mud/Tail Slam 30 2 Elementless/Mud Whirl 10 3 Water
-,Amatsu,140,Dragon,4,3,Water Spheres 60 2 Water/Typhoon 80 3 Elementless/Thunderstrikes 40 4 Thunder/Lightning Nova 180 2 Water 2 Thunder 2 Elementless
-,Anjanath,70,Water,2,1,Fire Sneeze 20 2 Fire/Tail Swipe 40 2 Elementless/Dragging Bite 60 3 Elementless
-,Arkveld,140,Dragon,3,2,Absorb/Chain Blade 40 2 Elementless/Dragon Burst 80 4 Dragon
-,Astalos,90,Ice,2,2,Wing Slam 20 1 Elementless/Thunder Lazer 40 2 Thunder/Charged Horn 70 3 Thunder
-,Balahara,60,Thunder,1,1,Pack/Tail Sweep 20 1 Elementless/Mucus 30 2 Water/Quicksand 50 3 Elementless
-,Barioth,80,Fire,2,1,Lunging Bite 20 1 Elementless/Tail Sweep 40 2 Elementless/Ice Tornado 50 3 Ice
-,Barroth,130,Fire,1,1,Mud Adept/Mud Bath 1 Water/Shake Off 1 Elementless/Charge 20 1 Elementless
-,Basarios,130,Dragon,3,1,Tough Skin/Fire Gaz 10 1 Fire/Poisonous Gas 10 2 Elementless/Sleep Gaz 3 Elementless
-,Bazelgeuse,90,Thunder,2,1,Ambush/Explosive Seeds 30 2 Fire/Kamikaze Bomber 50 2 Fire 1 Elementless
-,Beotodus,70,Fire,2,1,Snow Pack 30 1 Ice/Horn Strike 50 1 Ice 1 Elementless
-,Bishaten,60,Ice,1,1,Fruits/Rotten Fruit 10 1 Elementless/Whirlwind Dash 20 1 Elementless/Multi-Fruit Barrage 10 3 Elementless
-,Brachydios,130,Water,3,2,Intense Rage/Horn Smash 40 1 Fire/Tail Whip 70 3 Elementless/Pounds 100 2 Fire 2 Elementless
-,Chameleos,140,Fire,0,3,Invisible/One-way Flow 40 1 Elementless/Feeling Numb 4 Elementless
-,Chaotic Gore Magala,220,Dragon,3,5,Chaotic Frenzy/Chaotic Explosion 80 4 Elementless/Frenzy Mist 50 4 Elementless
-Charged,Rajang,110,Ice,3,5,Elder Dragon Predator/Steaming Punch 40 1 Elementless/Lightning Spit 70 3 Thunder/Thunder Beam 110 4 Thunder
-Charged ,Zinogre,130,Ice,4,5,Great Thunderbug/Amped Charge 60 2 Thunder/Electric Arc 90 3 Thunder/Thunderbug Discharge 150 4 Thunder
-,Chatacabra,80,Thunder,1,1,Sticky Punch 10 1 Elementless
-,Crimson Fatalis,400,Dragon,5,4,Heat Waves 30 1 Fire/Meteors 40 1 Fire/Fire Breath 90 3 Fire
-,Crimson Glow Valstrax,160,Fire/Ice/Thunder/Water,2,3,Ambush/World Tour 2 Elementless/Wingblade Thrusts 50 2 Elementless/Dragon Beam 90 3 Dragon
-,Daimyo Hermitaur,100,Thunder,2,1,Hard Shell/Piercing Charge 20 1 Elementless/Water Beam 40 2 Water
-,Dalamadur,210,Dragon,3,3,Tongue Flicking 20 1 Elementless/Unhinged Bite 40 2 Elementless/Stomp 120 4 Elementless
-,Deviljho,130,Dragon/Thunder,4,2,Always Hungry/Dragon Breath 70 3 Dragon/Devil's Jaw 120 4 Elementless
-,Diablos,80,Ice,2,1,Deadly Tunnels 20 1 Elementless/Pointy Charge 40 2 Elementless/Tail Slam 40 3 Elementless
-,Doshaguma,90,Fire,2,1,Berserker Rage/Bite 20 1 Elementless/Boulder Throw 40 2 Elementless/Body Slam 60 3 Elementless
-,Espinas,130,Ice,3,2,Heavy Sleeper/Blight Breath 40 1 Fire 2 Elementless/Dragging Charge 70 3 Elementless
-,Fatalis,400,Dragon,5,4,Fire Cone 80 3 Fire/Circular Flame 120 4 Fire/Schrade's Demise 150 5 Fire
-,Gaismagorm,190,Dragon,4,3,Qurio Spreading/Collect One's Due/Abyssal Vacuum 60 2 Elementless/Archdemon Laser 120 4 Elementless
-,Gigginox,80,Fire,2,1,Giggi Sac/Poisonous Mist 10 2 Elementless/Body Slam 30 2 Elementless
-,Glavenus,120,Water,3,2,Sharpened Blade/Heated Blade/Tail Slash 40 2 Elementless/Ultimate Tail Spin 90 4 Elementless
-,Gogmazios,200,Dragon,2,3,Tared Environment/Heavy Stomp 70 2 Elementless/Fire Beam 70 3 Fire/Tar Meteor Shower 150 5 Fire
-,Gore Magala,150,Fire,2,2,Evolution/Frenzy Virus/Stomp 50 2 Elementless/Frenzy Ball 30 3 Elementless
-,Goss Harag,70,Fire,2,1,Ice Blade/Ice Mace/Arm Swing 20 1 Elementless/Ice Beam 30 2 Ice/Crushing Leap 50 3 Elementless
-,Gravios,170,Water,3,2,Rocky Skin/Poisonous Gas 10 2 Elementless/Fire Beam 40 2 Fire/Sleep Gaz 3 Elementless
-,Great Baggi,50,Fire,1,1,Swarm/Side Tackle 20 1 Elementless/Sleep Spit 2 Elementless
-,Great Izuchi,50,Thunder,1,1,Swarm/Spining Tail 20 1 Elementless/Hanging Threat 40 2 Elementless
-,Great Jagras,50,Fire,1,1,Dinner Time/Acid Regurgitations 0/Bite 10 1 Elementless/Scratch 30 2 Elementless/Body Slam 50 3 Elementless
-,Great Wroggi,50,Ice,1,1,Swarm/Whipping Tail 20 1 Elementless/Poison Cloud 10 2 Elementless
-,Guardian Doshaguma,90,Fire,2,1,Guardian/Bite 20 1 Elementless/Body Slam 50 2 Elementless
-,Guardian Ebony Odogaron,80,Dragon,1,1,Guardian/Claw Strike 20 1 Elementless/Dragon Bite 50 2 Dragon 1 Elementless
-,Guardian Fulgur Anjanath,80,Ice,3,1,Guardian/Delayed Thunder Clap/Stomp 20 2 Elementless/Dragging Bite 60 4 Elementless
-,Guardian Rathalos,140,Dragon,2,2,Guardian/Ruthless Charge 50 2 Elementless/Flamethrower 70 3 Fire
-,Gypceros,60,Fire,1,1,Apparent Death/Viscous Poison 20 1 Elementless/Flashbang 2 Elementless
-,Hirabami,60,Fire/Thunder,1,1,One For All/Ice Spit 20 1 Ice 1 Elementless/Rasor Tail 40 2 Elementless/Spin Smash 60 3 Elementless
-,Jin Dahaad,110,Fire,3,1,Sweeping Breath 40 2 Ice/Body Slam 50 3 Elementless/Ice Nova 100 5 Ice
-,Khezu,90,Fire,2,1,Thunder Ball 20 1 Thunder/Thunder Dome 30 2 Thunder/Slow Killer 30 3 Thunder
-,Kirin,140,Fire,2,3,Harden Scales/Thunder Lord/Thunderstrike 60 2 Thunder/Thunder Storm 4 Thunder
-,Kushala Daora,160,Thunder,4,3,Wind Barrier/Wind Blast 40 1 Elementless/Infernal Tornado 3 Elementless/Hurricane 80 2 Dragon 2 Elementless
-,Lagiacrus,150,Fire,2,2,Charged Up/Hip Check 50 2 Elementless/Electric Discharge 100 4 Thunder
-,Lagombi,60,Fire,1,1,Renforced Rear/Snow Surf 20 1 Elementless/Giant Snowball 30 2 Ice
-,Lala Barina,60,Fire,1,1,Florets Scattering 10 1 Elementless/Dancing Claws 20 1 Elementless/Paralyzing Thorn 30 2 Elementless
-,Legiana,80,Thunder,2,1,Ice Residue/Ice Ring 30 2 Ice/Tail Slam 60 3 Elementless
-,Lunastra,140,Ice,3,3,Blue Hell/Flame Sweeps 50 2 Fire/Hellflare 70 4 Fire
-,Magnamalo,150,Water,3,2,Hellfire Rain 40 1 Fire 1 Elementless/Dust Blast 30 2 Fire 1 Elementless/Hellfire Rifle 100 2 Fire 2 Elementless
-,Malzeno,110,Dragon,0,3,Teleport/Piercing Tail 20 1 Elementless/Qurio 70 2 Dragon 1 Elementless
-,Mizutsune,140,Thunder,2,2,Bubble Dance 30 1 Water/Water Beam 50 2 Water/Rising Spin Tail 80 3 Elementless
-,Nargacuga,110,Thunder,1,2,Evade/Tail Spikes 30 1 Elementless/Wing Blade Slash 80 3 Elementless
-,Nergigante,150,Thunder,3,3,Regeneration/Claw Sweep 40 1 Elementless/Piercing Horn 70 2 Elementless/Dive Bomb 130 3 Elementless
-,Nerscylla,90,Fire,2,1,Natural Predator/Tranquilizing Stinger 2 Elementless/Poisonous Jaw 20 2 Elementless/Death From Above 30 2 Elementless
-,Paolumu,60,Fire,1,1,Tail Slam 20 1 Elementless/Airborne Dive 40 2 Elementless
-,Pukei-Pukei,50,Thunder,1,1,Mushroom Based Diet/Tongue Whip 20 1 Elementless/Poisonous Mist 20 2 Elementless
-,Quematrice,60,Water,2,1,Peck 20 1 Elementless/Fan Flame 30 2 Fire/Tail Sweep 40 1 Fire 1 Elementless
-,Qurupeco,60,Ice,1,1,Cry For Help/Peck 10 2 Elementless
-,Rajang,110,Ice,3,2,Elder Dragon Predator/Charged Up/Monkey Jab 10 1 Elementless/Crushing Grab 50 2 Elementless
-,Rathalos,150,Dragon,2,2,Fire Ball 50 2 Fire/Flamethrower 80 3 Fire
-,Rathian,100,Dragon,2,1,Tail Flip 30 2 Elementless/Fire Ball 30 2 Fire
-,Rey Dau,90,Ice,3,1,Wing Slash 50 2 Elementless/Lightning Bolt 70 2 Thunder 1 Elementless/Thunder Blast 130 4 Thunder
-,Royal Ludroth,60,Fire,1,1,Swarm/Water Charge 20 1 Water/Roll 40 2 Elementless
-,Savage Deviljho,160,Thunder,4,3,Endless Appetite/Draconic Cloud 80 3 Dragon/Monster Throw 70 5 Elementless
-,Seregios,120,Thunder,0,2,Flying Scratches/Tail Slam 30 1 Elementless/Piercing Scales 20 2 Elementless/Acrobatic Claws 80 3 Elementless
-,Shagaru Magala,300,Dragon,4,5,Frenzy Virus/Body Slam 70 3 Elementless/Frenzy Laser 150 5 Elementless
-,Teostra,140,Water,3,3,Flame Aura/Explosive Snap 50 3 Fire/Supernova 120 4 Fire/Mate For Life 200 6 Fire
-,Tigrex,140,Thunder,2,2,Concussive Roar 30 1 Elementless/Charge 60 2 Elementless/Land Boulder 50 3 Elementless
-,Xu Wu,70,Ice,2,1,Top-down Predation/Golden Spike 20 1 Elementless/Grim Reaper 10 3 Elementless
-,Zinogre,130,Ice,3,3,Thunderbug's Howl/Paw Slams 30 1 Elementless/Tail Slam 50 2 Elementless/Fulgor Shot 70 3 Thunder
+,Aknosom,60,Water,2,1,Backward_Kick 20 1 Elementless/Fire_Ball 30 2 Fire
+,Alatreon,400,,5,4,Escaton_Judgement/Dragon_Blast 120 2 Dragon 1 Dragon/Thunder_Rain 120 3 Thunder/Fire_Beam 120 3 Fire/Ice_Breath 120 3 Ice/Water_Cannon 120 3 Water
+,Almudron,70,Fire,2,1,Compacted_Mud/Tail_Slam 30 2 Elementless/Mud_Whirl 10 3 Water
+,Amatsu,140,Dragon,4,3,Water_Spheres 60 2 Water/Typhoon 80 3 Elementless/Thunderstrikes 40 4 Thunder/Lightning_Nova 180 2 Water 2 Thunder 2 Elementless
+,Anjanath,70,Water,2,1,Fire_Sneeze 20 2 Fire/Tail_Swipe 40 2 Elementless/Dragging_Bite 60 3 Elementless
+,Arkveld,140,Dragon,3,2,Absorb/Chain_Blade 40 2 Elementless/Dragon_Burst 80 4 Dragon
+,Astalos,90,Ice,2,2,Wing_Slam 20 1 Elementless/Thunder_Lazer 40 2 Thunder/Charged_Horn 70 3 Thunder
+,Balahara,60,Thunder,1,1,Pack/Tail_Sweep 20 1 Elementless/Mucus 30 2 Water/Quicksand 50 3 Elementless
+,Barioth,80,Fire,2,1,Lunging_Bite 20 1 Elementless/Tail_Sweep 40 2 Elementless/Ice_Tornado 50 3 Ice
+,Barroth,130,Fire,1,1,Mud_Adept/Mud_Bath 1 Water/Shake_Off 1 Elementless/Charge 20 1 Elementless
+,Basarios,130,Dragon,3,1,Tough_Skin/Fire_Gaz 10 1 Fire/Poisonous_Gas 10 2 Elementless/Sleep_Gaz 3 Elementless
+,Bazelgeuse,90,Thunder,2,1,Ambush/Explosive_Seeds 30 2 Fire/Kamikaze_Bomber 50 2 Fire 1 Elementless
+,Beotodus,70,Fire,2,1,Snow_Pack 30 1 Ice/Horn_Strike 50 1 Ice 1 Elementless
+,Bishaten,60,Ice,1,1,Fruits/Rotten_Fruit 10 1 Elementless/Whirlwind_Dash 20 1 Elementless/Multi-Fruit_Barrage 10 3 Elementless
+,Brachydios,130,Water,3,2,Intense_Rage/Horn_Smash 40 1 Fire/Tail_Whip 70 3 Elementless/Pounds 100 2 Fire 2 Elementless
+,Chameleos,140,Fire,0,3,Invisible/One-way_Flow 40 1 Elementless/Feeling_Numb 4 Elementless
+,Chaotic Gore Magala,220,Dragon,3,5,Chaotic_Frenzy/Chaotic_Explosion 80 4 Elementless/Frenzy_Mist 50 4 Elementless
+Charged,Rajang,110,Ice,3,5,Elder_Dragon_Predator/Steaming_Punch 40 1 Elementless/Lightning_Spit 70 3 Thunder/Thunder_Beam 110 4 Thunder
+Charged_,Zinogre,130,Ice,4,5,Great_Thunderbug/Amped_Charge 60 2 Thunder/Electric_Arc 90 3 Thunder/Thunderbug_Discharge 150 4 Thunder
+,Chatacabra,80,Thunder,1,1,Sticky_Punch 10 1 Elementless
+,Crimson Fatalis,400,Dragon,5,4,Heat_Waves 30 1 Fire/Meteors 40 1 Fire/Fire_Breath 90 3 Fire
+,Crimson Glow Valstrax,160,Fire/Ice/Thunder/Water,2,3,Ambush/World_Tour 2 Elementless/Wingblade_Thrusts 50 2 Elementless/Dragon_Beam 90 3 Dragon
+,Daimyo Hermitaur,100,Thunder,2,1,Hard_Shell/Piercing_Charge 20 1 Elementless/Water_Beam 40 2 Water
+,Dalamadur,210,Dragon,3,3,Tongue_Flicking 20 1 Elementless/Unhinged_Bite 40 2 Elementless/Stomp 120 4 Elementless
+,Deviljho,130,Dragon/Thunder,4,2,Always_Hungry/Dragon_Breath 70 3 Dragon/Devil's_Jaw 120 4 Elementless
+,Diablos,80,Ice,2,1,Deadly_Tunnels 20 1 Elementless/Pointy_Charge 40 2 Elementless/Tail_Slam 40 3 Elementless
+,Doshaguma,90,Fire,2,1,Berserker_Rage/Bite 20 1 Elementless/Boulder_Throw 40 2 Elementless/Body_Slam 60 3 Elementless
+,Espinas,130,Ice,3,2,Heavy_Sleeper/Blight_Breath 40 1 Fire 2 Elementless/Dragging_Charge 70 3 Elementless
+,Fatalis,400,Dragon,5,4,Fire_Cone 80 3 Fire/Circular_Flame 120 4 Fire/Schrade's_Demise 150 5 Fire
+,Gaismagorm,190,Dragon,4,3,Qurio_Spreading/Collect_One's_Due/Abyssal_Vacuum 60 2 Elementless/Archdemon_Laser 120 4 Elementless
+,Gigginox,80,Fire,2,1,Giggi_Sac/Poisonous_Mist 10 2 Elementless/Body_Slam 30 2 Elementless
+,Glavenus,120,Water,3,2,Sharpened_Blade/Heated_Blade/Tail_Slash 40 2 Elementless/Ultimate_Tail_Spin 90 4 Elementless
+,Gogmazios,200,Dragon,2,3,Tared_Environment/Heavy_Stomp 70 2 Elementless/Fire_Beam 70 3 Fire/Tar_Meteor_Shower 150 5 Fire
+,Gore Magala,150,Fire,2,2,Evolution/Frenzy_Virus/Stomp 50 2 Elementless/Frenzy_Ball 30 3 Elementless
+,Goss Harag,70,Fire,2,1,Ice_Blade/Ice_Mace/Arm_Swing 20 1 Elementless/Ice_Beam 30 2 Ice/Crushing_Leap 50 3 Elementless
+,Gravios,170,Water,3,2,Rocky_Skin/Poisonous_Gas 10 2 Elementless/Fire_Beam 40 2 Fire/Sleep_Gaz 3 Elementless
+,Great Baggi,50,Fire,1,1,Swarm/Side_Tackle 20 1 Elementless/Sleep_Spit 2 Elementless
+,Great Izuchi,50,Thunder,1,1,Swarm/Spining_Tail 20 1 Elementless/Hanging_Threat 40 2 Elementless
+,Great Jagras,50,Fire,1,1,Dinner_Time/Acid_Regurgitations 0/Bite 10 1 Elementless/Scratch 30 2 Elementless/Body_Slam 50 3 Elementless
+,Great Wroggi,50,Ice,1,1,Swarm/Whipping_Tail 20 1 Elementless/Poison_Cloud 10 2 Elementless
+,Guardian Doshaguma,90,Fire,2,1,Guardian/Bite 20 1 Elementless/Body_Slam 50 2 Elementless
+,Guardian Ebony Odogaron,80,Dragon,1,1,Guardian/Claw_Strike 20 1 Elementless/Dragon_Bite 50 2 Dragon 1 Elementless
+,Guardian Fulgur Anjanath,80,Ice,3,1,Guardian/Delayed_Thunder_Clap/Stomp 20 2 Elementless/Dragging_Bite 60 4 Elementless
+,Guardian Rathalos,140,Dragon,2,2,Guardian/Ruthless_Charge 50 2 Elementless/Flamethrower 70 3 Fire
+,Gypceros,60,Fire,1,1,Apparent_Death/Viscous_Poison 20 1 Elementless/Flashbang 2 Elementless
+,Hirabami,60,Fire/Thunder,1,1,One_For_All/Ice_Spit 20 1 Ice 1 Elementless/Rasor_Tail 40 2 Elementless/Spin_Smash 60 3 Elementless
+,Jin Dahaad,110,Fire,3,1,Sweeping_Breath 40 2 Ice/Body_Slam 50 3 Elementless/Ice_Nova 100 5 Ice
+,Khezu,90,Fire,2,1,Thunder_Ball 20 1 Thunder/Thunder_Dome 30 2 Thunder/Slow_Killer 30 3 Thunder
+,Kirin,140,Fire,2,3,Harden_Scales/Thunder_Lord/Thunderstrike 60 2 Thunder/Thunder_Storm 4 Thunder
+,Kushala Daora,160,Thunder,4,3,Wind_Barrier/Wind_Blast 40 1 Elementless/Infernal_Tornado 3 Elementless/Hurricane 80 2 Dragon 2 Elementless
+,Lagiacrus,150,Fire,2,2,Charged_Up/Hip_Check 50 2 Elementless/Electric_Discharge 100 4 Thunder
+,Lagombi,60,Fire,1,1,Renforced_Rear/Snow_Surf 20 1 Elementless/Giant_Snowball 30 2 Ice
+,Lala Barina,60,Fire,1,1,Florets_Scattering 10 1 Elementless/Dancing_Claws 20 1 Elementless/Paralyzing_Thorn 30 2 Elementless
+,Legiana,80,Thunder,2,1,Ice_Residue/Ice_Ring 30 2 Ice/Tail_Slam 60 3 Elementless
+,Lunastra,140,Ice,3,3,Blue_Hell/Flame_Sweeps 50 2 Fire/Hellflare 70 4 Fire
+,Magnamalo,150,Water,3,2,Hellfire_Rain 40 1 Fire 1 Elementless/Dust_Blast 30 2 Fire 1 Elementless/Hellfire_Rifle 100 2 Fire 2 Elementless
+,Malzeno,110,Dragon,0,3,Teleport/Piercing_Tail 20 1 Elementless/Qurio 70 2 Dragon 1 Elementless
+,Mizutsune,140,Thunder,2,2,Bubble_Dance 30 1 Water/Water_Beam 50 2 Water/Rising_Spin_Tail 80 3 Elementless
+,Nargacuga,110,Thunder,1,2,Evade/Tail_Spikes 30 1 Elementless/Wing_Blade_Slash 80 3 Elementless
+,Nergigante,150,Thunder,3,3,Regeneration/Claw_Sweep 40 1 Elementless/Piercing_Horn 70 2 Elementless/Dive_Bomb 130 3 Elementless
+,Nerscylla,90,Fire,2,1,Natural_Predator/Tranquilizing_Stinger 2 Elementless/Poisonous_Jaw 20 2 Elementless/Death_From_Above 30 2 Elementless
+,Paolumu,60,Fire,1,1,Tail_Slam 20 1 Elementless/Airborne_Dive 40 2 Elementless
+,Pukei-Pukei,50,Thunder,1,1,Mushroom_Based_Diet/Tongue_Whip 20 1 Elementless/Poisonous_Mist 20 2 Elementless
+,Quematrice,60,Water,2,1,Peck 20 1 Elementless/Fan_Flame 30 2 Fire/Tail_Sweep 40 1 Fire 1 Elementless
+,Qurupeco,60,Ice,1,1,Cry_For_Help/Peck 10 2 Elementless
+,Rajang,110,Ice,3,2,Elder_Dragon_Predator/Charged_Up/Monkey_Jab 10 1 Elementless/Crushing_Grab 50 2 Elementless
+,Rathalos,150,Dragon,2,2,Fire_Ball 50 2 Fire/Flamethrower 80 3 Fire
+,Rathian,100,Dragon,2,1,Tail_Flip 30 2 Elementless/Fire_Ball 30 2 Fire
+,Rey Dau,90,Ice,3,1,Wing_Slash 50 2 Elementless/Lightning_Bolt 70 2 Thunder 1 Elementless/Thunder_Blast 130 4 Thunder
+,Royal Ludroth,60,Fire,1,1,Swarm/Water_Charge 20 1 Water/Roll 40 2 Elementless
+,Savage Deviljho,160,Thunder,4,3,Endless_Appetite/Draconic_Cloud 80 3 Dragon/Monster_Throw 70 5 Elementless
+,Seregios,120,Thunder,0,2,Flying_Scratches/Tail_Slam 30 1 Elementless/Piercing_Scales 20 2 Elementless/Acrobatic_Claws 80 3 Elementless
+,Shagaru Magala,300,Dragon,4,5,Frenzy_Virus/Body_Slam 70 3 Elementless/Frenzy_Laser 150 5 Elementless
+,Teostra,140,Water,3,3,Flame_Aura/Explosive_Snap 50 3 Fire/Supernova 120 4 Fire/Mate_For_Life 200 6 Fire
+,Tigrex,140,Thunder,2,2,Concussive_Roar 30 1 Elementless/Charge 60 2 Elementless/Land_Boulder 50 3 Elementless
+,Xu Wu,70,Ice,2,1,Top-down_Predation/Golden_Spike 20 1 Elementless/Grim_Reaper 10 3 Elementless
+,Zinogre,130,Ice,3,3,Thunderbug's_Howl/Paw_Slams 30 1 Elementless/Tail_Slam 50 2 Elementless/Fulgor_Shot 70 3 Thunder

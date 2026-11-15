@@ -64,6 +64,7 @@ public class CSVService {
 
                     for (String rawMove : rawMoves) {
                         String[] moveParts = rawMove.trim().split("\s+");
+                        moveParts[0] = moveParts[0].replace("_", " ");
                         ArrayList<String> singleMoveInfo = new ArrayList<>(Arrays.asList(moveParts));
                         movesList.add(singleMoveInfo);
                     }
