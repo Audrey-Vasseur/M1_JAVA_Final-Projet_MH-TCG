@@ -5,6 +5,7 @@ import com.opencsv.CSVReader;
 
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class CSVService {
     private static final String filePath = "src/main/resources/csv/cards_output.csv";
@@ -51,9 +52,23 @@ public class CSVService {
                     }
                 }
                 model.setWeakness(weaknessList);
+
                 model.setRetreatCost(Integer.parseInt(line[4]));
                 model.setRarity(Integer.parseInt(line[5]));
+                // for the moves
+                String movesPlace = line[6];
+                ArrayList<ArrayList<String>> movesList = new ArrayList<>();
 
+                if (movesPlace != null && !movesPlace.trim().isEmpty()) {
+                    String[] rawMoves = movesPlace.split("/");
+
+                    for (String rawMove : rawMoves) {
+                        String[] moveParts = rawMove.trim().split("\s+");
+                        ArrayList<String> singleMoveInfo = new ArrayList<>(Arrays.asList(moveParts));
+                        movesList.add(singleMoveInfo);
+                    }
+                }
+                model.setMoves(movesList);
                 list.add(model);
             }
             return list;

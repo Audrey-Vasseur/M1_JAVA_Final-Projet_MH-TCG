@@ -6,6 +6,7 @@ import Classes.Enum.Element;
 import Classes.Enum.Token;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Map;
 
 public abstract class MonsterCard extends Card{
     protected int HP;
@@ -15,6 +16,7 @@ public abstract class MonsterCard extends Card{
     protected int rarity;
     protected ArrayList<Token> tokens;
     protected Player owner;
+    protected ArrayList<ArrayList<String>> moves;
 
     // To create a basic card with no attacks (they'll be created for each monster directly)
 //    public MonsterCard(String name, int maxHP, Element weakness, int retreatCost, int rarity, Player owner){
@@ -40,6 +42,7 @@ public abstract class MonsterCard extends Card{
             this.weakness = data.getWeakness();
             this.rarity = data.getRarity();
             this.retreatCost = new ArrayList<Element>(Collections.nCopies(data.getRetreatCost(),Element.Elementless));
+            this.moves = data.getMoves();
         }
     }
 
@@ -63,6 +66,9 @@ public abstract class MonsterCard extends Card{
 
     public int getRarity(){
         return rarity;
+    }
+    public ArrayList<ArrayList<String>> getMoves() {
+        return moves;
     }
 
     // Setters
@@ -104,7 +110,6 @@ public abstract class MonsterCard extends Card{
     }
 
 
-
     // AddToken --> used to add tokens of affliction to a Monster
     public void AddToken(Token token){
         tokens.add(token);
@@ -138,6 +143,5 @@ public abstract class MonsterCard extends Card{
         }
         return list;
     }
-
 
 }

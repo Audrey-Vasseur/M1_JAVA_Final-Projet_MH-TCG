@@ -41,6 +41,7 @@ public class Main {
             System.out.println("RetreatCost: "+ ajarakan1.getRetreatCost());
             System.out.println("Rarity: "+ ajarakan1.getRarity());
             System.out.println("1st attack: "+ ajarakan1.PowerPunch(aknosom1));
+            System.out.println("Moves: "+ ajarakan1.getMoves());
 //            System.out.println("2nd attack: "+ ajarakan1.ShoulderRam(aknosom1));
 //            System.out.println("3rd attack: "+ ajarakan1.BlastingStar(aknosom1));
             System.out.println("------------------------------------");
