@@ -28,11 +28,9 @@ public abstract class MonsterCard extends Card{
 //        this.owner = owner;
 //    }
 
-    public MonsterCard(String name, int retreatCost, int rarity, Player owner){
+    public MonsterCard(String name, Player owner){
         CSVModel data = CSVService.getCardByName(name);
         super(name);
-        this.retreatCost = new ArrayList<Element>(Collections.nCopies(retreatCost,Element.Elementless));
-        this.rarity = rarity;
         this.tokens = new ArrayList<Token>();
         this.owner = owner;
 
@@ -40,6 +38,8 @@ public abstract class MonsterCard extends Card{
             this.HP = data.getHealthpoints();
             this.maxHP = data.getHealthpoints();
             this.weakness = data.getWeakness();
+            this.rarity = data.getRarity();
+            this.retreatCost = new ArrayList<Element>(Collections.nCopies(data.getRetreatCost(),Element.Elementless));
         }
     }
 

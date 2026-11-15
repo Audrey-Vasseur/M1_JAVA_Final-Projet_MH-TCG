@@ -24,7 +24,7 @@ public class CSVModel {
     protected int retreatCost;
 
     @CsvBindByName(column = "rarity", required = true)
-    protected String rarity;
+    protected int rarity;
 
     @CsvCustomBindByName(column = "moves", converter = CSVMovesConverter.class)
     protected ArrayList<ArrayList<String>> moves;
@@ -32,7 +32,7 @@ public class CSVModel {
     public CSVModel() {
     }
 
-    public CSVModel(String subname, String name, int healthpoints, ArrayList<Element> weakness, int retreatCost, String rarity, ArrayList<ArrayList<String>> moves) {
+    public CSVModel(String subname, String name, int healthpoints, ArrayList<Element> weakness, int retreatCost, int rarity, ArrayList<ArrayList<String>> moves) {
         this.subname = subname;
         this.name = name;
         this.healthpoints = healthpoints;
@@ -82,11 +82,11 @@ public class CSVModel {
         this.retreatCost = retreatCost;
     }
 
-    public String getRarity() {
+    public int getRarity() {
         return rarity;
     }
 
-    public void setRarity(String rarity) {
+    public void setRarity(int rarity) {
         this.rarity = rarity;
     }
 

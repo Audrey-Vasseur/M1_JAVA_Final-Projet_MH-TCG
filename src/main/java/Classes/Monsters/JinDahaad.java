@@ -11,7 +11,7 @@ public class JinDahaad extends MonsterCard {
     private static final int thirdAttackDamage = 100;
 
     public JinDahaad(Player owner) {
-        super("Jin Dahaad", 3, 1, owner);
+        super("Jin Dahaad", owner);
     }
 
     // 1st attack: Sweeping Breath

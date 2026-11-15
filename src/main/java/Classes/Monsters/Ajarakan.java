@@ -11,7 +11,7 @@ public class Ajarakan extends MonsterCard {
     private static final int thirdAttackDamage = 80;
 
     public Ajarakan(Player owner) {
-        super("Ajarakan", 2, 1, owner);
+        super("Ajarakan", owner);
     }
 
     // 1st attack: Power Punch

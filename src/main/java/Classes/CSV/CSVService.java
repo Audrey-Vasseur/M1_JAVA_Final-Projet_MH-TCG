@@ -51,6 +51,9 @@ public class CSVService {
                     }
                 }
                 model.setWeakness(weaknessList);
+                model.setRetreatCost(Integer.parseInt(line[4]));
+                model.setRarity(Integer.parseInt(line[5]));
+
                 list.add(model);
             }
             return list;
