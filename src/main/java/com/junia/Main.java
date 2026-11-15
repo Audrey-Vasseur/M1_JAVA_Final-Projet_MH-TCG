@@ -3,18 +3,20 @@ package com.junia;
 import Classes.Board;
 import Classes.CSV.CSVReadException;
 import Classes.CSV.CSVService;
-import Classes.Card;
-import Classes.ConsumableCard;
 import Classes.Enum.Element;
+import Classes.Items.MegaPotion;
+import Classes.Items.Potion;
 import Classes.Monsters.Ajarakan;
 import Classes.Monsters.Aknosom;
+import Classes.Monsters.Barioth;
+import Classes.Monsters.JinDahaad;
 import Classes.Player;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Collections;
 
-import static Classes.Player.nobodyHasWon;
+import static Classes.Player.somebodyHasWon;
 
 
 public class Main {
@@ -23,39 +25,73 @@ public class Main {
             CSVService.initialize();
             Board board = new Board();          // creation of the board
             ArrayList<Player> players = board.askPlayerName(2);
+
+            players.get(0).addToDeck(new Ajarakan(players.get(0)));
+            players.get(0).addToDeck(new Ajarakan(players.get(0)));
+            players.get(0).addToDeck(new Aknosom(players.get(0)));
+            players.get(0).addToDeck(new Barioth(players.get(0)));
+            players.get(0).addToDeck(new Barioth(players.get(0)));
+            players.get(0).addToDeck(new Aknosom(players.get(0)));
+            players.get(0).addToDeck(new JinDahaad(players.get(0)));
+            players.get(0).addToDeck(new JinDahaad(players.get(0)));
+            players.get(0).addToDeck(new Potion(players.get(0)));
+            players.get(0).addToDeck(new MegaPotion(players.get(0)));
+
+            players.get(1).addToDeck(new Ajarakan(players.get(1)));
+            players.get(1).addToDeck(new Ajarakan(players.get(1)));
+            players.get(1).addToDeck(new Aknosom(players.get(1)));
+            players.get(1).addToDeck(new Aknosom(players.get(1)));
+            players.get(1).addToDeck(new Barioth(players.get(1)));
+            players.get(1).addToDeck(new Barioth(players.get(1)));
+            players.get(1).addToDeck(new JinDahaad(players.get(1)));
+            players.get(1).addToDeck(new JinDahaad(players.get(1)));
+            players.get(1).addToDeck(new Potion(players.get(1)));
+            players.get(1).addToDeck(new MegaPotion(players.get(1)));
+
+            Collections.shuffle(players);
             board.initGame(players.get(0),players.get(1));
 
             int turnNumber = 1;
-            while(nobodyHasWon(players)) {
-                System.out.println("------- Turn "+ turnNumber + " ------ ");
-                System.out.println("- "+ players.get(0) + " -");
-
-
-
+            boolean playerHasPlayed = false;
+            while(!somebodyHasWon(players)) {
+                System.out.println("------- ROUND "+ turnNumber + " ------ ");
+                playerHasPlayed = false;
+                System.out.println("- " + players.getFirst().getName() + " -");
+                do{
+                    if(board.startTurn(players.getFirst(),players.getLast()) != -1){
+                        playerHasPlayed = true;
+                    };
+                }while(!playerHasPlayed);
+                playerHasPlayed = false;
+                do{
+                    if(board.startTurn(players.getLast(),players.getFirst()) != -1){
+                        playerHasPlayed = true;
+                    };
+                }while(!playerHasPlayed);
                 turnNumber++;
             }
-            Ajarakan ajarakan1 = new Ajarakan(players.get(0));
-            Aknosom aknosom1 = new Aknosom(players.get(1));
-            players.get(0).addMana(Element.Elementless);
-            players.get(0).addMana(Element.Elementless);
-            players.get(0).addMana(Element.Fire);
-            players.get(0).addMana(Element.Fire);
-            System.out.println("------------------------------------");
-            System.out.println("Verification monsters attributes");
-            System.out.println("name: "+ ajarakan1.getName());
-            System.out.println("HP: "+ ajarakan1.getHP());
-            System.out.println("Weakness: "+ ajarakan1.getWeakness());
-            System.out.println("RetreatCost: "+ ajarakan1.getRetreatCost());
-            System.out.println("Rarity: "+ ajarakan1.getRarity());
-            System.out.println("Moves: "+ ajarakan1.getMoves());
-            // ajarakan1.Attack1(aknosom1);
-            // ajarakan1.Attack2(aknosom1);
-            System.out.println(players.get(0).getManaPool());
-            ajarakan1.Attack3(aknosom1);
-            System.out.println(players.get(0).getManaPool());
+//            Ajarakan ajarakan1 = new Ajarakan(players.get(0));
+//            Aknosom aknosom1 = new Aknosom(players.get(1));
+//            players.get(0).addMana(Element.Elementless);
+//            players.get(0).addMana(Element.Elementless);
+//            players.get(0).addMana(Element.Fire);
+//            players.get(0).addMana(Element.Fire);
+//            System.out.println("------------------------------------");
+//            System.out.println("Verification monsters attributes");
+//            System.out.println("name: "+ ajarakan1.getName());
+//            System.out.println("HP: "+ ajarakan1.getHP());
+//            System.out.println("Weakness: "+ ajarakan1.getWeakness());
+//            System.out.println("RetreatCost: "+ ajarakan1.getRetreatCost());
+//            System.out.println("Rarity: "+ ajarakan1.getRarity());
+//            System.out.println("Moves: "+ ajarakan1.getMoves());
+//            // ajarakan1.Attack1(aknosom1);
+//            // ajarakan1.Attack2(aknosom1);
+//            System.out.println(players.get(0).getManaPool());
+//            ajarakan1.attack3(aknosom1);
+//            System.out.println(players.get(0).getManaPool());
 //            System.out.println("2nd attack: "+ ajarakan1.ShoulderRam(aknosom1));
 //            System.out.println("3rd attack: "+ ajarakan1.BlastingStar(aknosom1));
-            System.out.println("------------------------------------");
+//            System.out.println("------------------------------------");
 
         }catch (Exception e){
             System.err.println("CRASH! details: ");

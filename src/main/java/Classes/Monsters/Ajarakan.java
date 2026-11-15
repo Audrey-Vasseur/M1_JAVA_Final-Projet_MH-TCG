@@ -14,8 +14,8 @@ public class Ajarakan extends MonsterCard {
         super("Ajarakan", owner);
     }
 
-    // 1st attack: Power Punch
-    public int Attack1(MonsterCard enemy){
+    @Override
+    public int attack1(MonsterCard enemy){
         ArrayList<String> attack = moves.get(0);
         String attackName =  attack.get(0);
         int attackDamage =  Integer.parseInt(attack.get(1));
@@ -27,12 +27,12 @@ public class Ajarakan extends MonsterCard {
             return enemy.loseHP(attackDamage, elementType);
         }else{
             System.out.println("You don't have enough Elements to use "+attackName+"!");
-            return 0;
+            return -1;
         }
     }
 
-    // 2nd attack: Shoulder Ram --> apply 1 Blastblight Token
-    public int Attack2(MonsterCard enemy){
+    @Override
+    public int attack2(MonsterCard enemy){
         ArrayList<String> attack = moves.get(1);
         String attackName =  attack.get(0);
         int attackDamage =  Integer.parseInt(attack.get(1));
@@ -45,12 +45,12 @@ public class Ajarakan extends MonsterCard {
             return enemy.loseHP(attackDamage, elementType);
         }else{
             System.out.println("You don't have enough Elements to use "+attackName+"!");
-            return 0;
+            return -1;
         }
     }
 
-    // 3rd attack: Blasting Star --> apply 2 Blastblight Token
-    public int Attack3(MonsterCard enemy){
+    @Override
+    public int attack3(MonsterCard enemy){
         ArrayList<String> attack = moves.get(2);
         String attackName =  attack.get(0);
         int attackDamage =  Integer.parseInt(attack.get(1));
@@ -63,7 +63,7 @@ public class Ajarakan extends MonsterCard {
             return enemy.loseHP(attackDamage, elementType);
         }else{
             System.out.println("You don't have enough Elements to use "+attackName+"!");
-            return 0;
+            return -1;
         }
     }
 }

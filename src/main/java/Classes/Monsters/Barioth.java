@@ -25,7 +25,7 @@ public class Barioth extends MonsterCard {
             return enemy.loseHP(attackDamage, elementType);
         }else{
             System.out.println("You don't have enough Elements to use "+attackName+"!");
-            return 0;
+            return -1;
         }
     }
 
@@ -41,7 +41,7 @@ public class Barioth extends MonsterCard {
             return enemy.loseHP(attackDamage, elementType);
         }else{
             System.out.println("You don't have enough Elements to use "+attackName+"!");
-            return 0;
+            return -1;
         }
     }
 
@@ -58,7 +58,7 @@ public class Barioth extends MonsterCard {
             return enemy.loseHP(attackDamage, elementType);
         }else{
             System.out.println("You don't have enough Elements to use "+attackName+"!");
-            return 0;
+            return -1;
         }
     }
 }

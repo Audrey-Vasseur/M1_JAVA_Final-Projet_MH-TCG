@@ -8,7 +8,7 @@ import java.util.Collections;
 public class Player {
     protected String name;
     protected ArrayList<Card> deck;
-    protected ArrayList<ConsumableCard> consumables;
+    protected ArrayList<Consumable> consumables;
     protected ArrayList<Card> hand;
     protected ArrayList<Card> board;
     protected ArrayList<Card> cemetery;
@@ -16,7 +16,7 @@ public class Player {
     protected ArrayList<Element> manaPool;
     protected ArrayList<Element> manaTypes;
 
-    public Player(String name, ArrayList<Card> deck, ArrayList<ConsumableCard> consumables, ArrayList<Element> manaTypes) {
+    public Player(String name, ArrayList<Card> deck, ArrayList<Consumable> consumables, ArrayList<Element> manaTypes) {
         this.name = name;
         this.deck = deck;
         this.consumables = consumables;
@@ -28,9 +28,15 @@ public class Player {
         this.cemetery = new ArrayList<>();
     }
     public Player(String name){
-        this(name, new ArrayList<Card>(), new ArrayList<ConsumableCard>(), new ArrayList<Element>());
+        this(name, new ArrayList<Card>(), new ArrayList<Consumable>(), new ArrayList<Element>());
     }
 
+    public String getName() {
+        return name;
+    }
+    public MonsterCard getActiveMonster(){
+        return (MonsterCard) board.get(0);
+    }
     public void setDeck(ArrayList<Card> deck) {
         this.deck = deck;
     }
@@ -51,7 +57,7 @@ public class Player {
         return deck;
     }
 
-    public ArrayList<ConsumableCard> getConsumables() {
+    public ArrayList<Consumable> getConsumables() {
         return consumables;
     }
 
@@ -138,19 +144,13 @@ public class Player {
         System.out.println("You gained "+ point + " point!");
     }
 
-    public static boolean nobodyHasWon(ArrayList<Player> players){
-        for(Player player : players){
-            if(player.getPoints() < 4){
-                return false;
-            }
-        }
-        System.out.println("A player has won the game!");
-        return true;
+    public static boolean somebodyHasWon(ArrayList<Player> players){
+        return players.getFirst().getPoints() >= 4 || players.getLast().getPoints() >= 4;
     }
 
     // Move a card from hand to board
-    public void handToBoard(int index){
-        board.add(hand.remove(index));
+    public boolean handToBoard(int index){
+        return board.add(hand.remove(index));
     }
 
     // Move cards on the board
@@ -161,7 +161,9 @@ public class Player {
     // Draw a card from the deck
     public void drawCard(){
         if(!deck.isEmpty()) {
-            hand.add(deck.removeFirst());
+            Card drawnCard = deck.removeFirst();
+            hand.add(drawnCard);
+            System.out.println("You draw: "+ drawnCard.getClass().getName());
         }
     }
 

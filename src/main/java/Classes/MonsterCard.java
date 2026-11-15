@@ -4,8 +4,11 @@ import Classes.CSV.CSVModel;
 import Classes.CSV.CSVService;
 import Classes.Enum.Element;
 import Classes.Enum.Token;
+import kotlin.time.Clock;
+
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 public abstract class MonsterCard extends Card {
     protected int HP;
@@ -216,5 +219,59 @@ public abstract class MonsterCard extends Card {
             }
         }
         return String.join(" and ", parts);
+    }
+
+    public int chooseAttack(Scanner scanner){
+        String str = "";
+        int i =1;
+        for (ArrayList<String> move : moves){
+            str += i +"- " + move.getFirst()+" ";
+        }
+        System.out.println(str);
+        int answer = -1;
+        do{
+            String input = scanner.nextLine();
+            try {
+                answer = Integer.parseInt(input.trim());
+                if (answer < 1 || answer > moves.size()-1) {
+                    throw new IllegalArgumentException("it must be between provided choices");
+                }
+            } catch (IllegalArgumentException e) {
+                System.out.println("Invalid input: " + e.getMessage());
+                answer =-1;
+            }
+        }while(answer == -1);
+        return answer;
+    }
+    protected int attack1(MonsterCard enemy){
+        return 0;
+    }
+    protected int attack2(MonsterCard enemy){
+        return 0;
+    }
+    protected int attack3(MonsterCard enemy){
+        return 0;
+    }
+    protected int attack4(MonsterCard enemy){
+        return 0;
+    }
+    protected int executAttack(int attackNumber, Player target){
+        switch (attackNumber){
+            case 1:
+                return attack1(target.getActiveMonster());
+            case 2:
+                return attack2(target.getActiveMonster());
+            case 3:
+                return attack3(target.getActiveMonster());
+            case 4:
+                return attack4(target.getActiveMonster());
+            default:
+                return -1;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

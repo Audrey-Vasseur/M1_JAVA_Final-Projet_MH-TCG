@@ -1,9 +1,9 @@
 package Classes;
 
-public abstract class ConsumableCard{
+public abstract class Consumable {
     protected String name;
 
-    public ConsumableCard(String name) {
+    public Consumable(String name) {
         this.name = name;
     }
 }

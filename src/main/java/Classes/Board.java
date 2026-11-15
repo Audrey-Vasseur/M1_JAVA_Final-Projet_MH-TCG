@@ -25,9 +25,10 @@ public class Board {
         give a random element
         check effects affecting the monsters (if any)
      */
-    public void startTurn(Player player){
+    public int startTurn(Player player, Player target){
         player.drawCard();
         giveRandomElement(player);
+        return doPlayerChoice(player, target);
     }
 
     /*
@@ -91,7 +92,7 @@ public class Board {
         for(int i = 0; i < numberOfPlayers; i++){
             System.out.println("Enter the "+ (i+1) + " player's name: ");
             String namePlayer = scanner.nextLine();
-            Player player = new Player(namePlayer,new ArrayList<Card>(),new ArrayList<ConsumableCard>(),new ArrayList<Element>(List.of(Element.Fire,Element.Ice)));
+            Player player = new Player(namePlayer,new ArrayList<Card>(),new ArrayList<Consumable>(),new ArrayList<Element>(List.of(Element.Fire,Element.Ice)));
             playersList.add(player);
         }
         return playersList;
@@ -127,13 +128,13 @@ public class Board {
                 spot = Integer.parseInt(input.trim());
                 int maxSpot =  limitedToBench ? 3 : 4;
                 if (spot < 1 || spot > maxSpot) {
-                    throw new IllegalArgumentException("it must be between provided choices");
+                    throw new IllegalArgumentException("It must be between provided choices");
                 }
                 int index = spot - 1;
 
                 if (needsToBeMonster) {
                     if (index >= player.board.size() || !(player.board.get(index) instanceof MonsterCard)) {
-                        throw new IllegalArgumentException("it must be a Monster");
+                        throw new IllegalArgumentException("It must be a Monster");
                     }
                 }
             } catch (IllegalArgumentException e) {
@@ -179,9 +180,72 @@ public class Board {
 
     private String formatSlot(ArrayList<Card> board, int index) {
         if (board == null || index >= board.size() || board.get(index) == null) {
-            return "Vide";
+            return "Empty";
         }
         return board.get(index).toString();
+    }
+
+
+    public int showHand(Player player){
+        String str = "";
+        int i =1;
+        for (Card card : player.getHand()){
+            str += i +"- " + card +" ";
+        }
+        System.out.println(str);
+        int answer = -1;
+        do{
+            String input = scanner.nextLine();
+            try {
+                answer = Integer.parseInt(input.trim());
+                if (answer < 1 || answer > player.getHand().size()-1) {
+                    throw new IllegalArgumentException("It must be between provided choices");
+                }
+            } catch (IllegalArgumentException e) {
+                System.out.println("Invalid input: " + e.getMessage());
+                answer =-1;
+            }
+        }while(answer == -1);
+        if(player.getHand().get(answer) instanceof MonsterCard){
+            if(player.handToBoard(answer)){
+                return 1;
+            }
+            return -1;
+        }else{
+            ItemCard ic = (ItemCard) player.getHand().get(answer);
+            boolean bool = false;
+            do{
+                int spot = chooseSpotOnBoard(player,false,true);
+                if(spot == -1){
+                    bool = true;
+                }else if(ic.use(spot)){
+                    return 2;
+                }
+            }while(!bool);
+            return -1;
+        }
+    }
+
+    public int doPlayerChoice(Player player, Player target){
+        System.out.println("What do you want to do?\n 1- Attack with " + player.getActiveMonster() + " | 2- Hand");
+        int answer = -1;
+        do{
+            String input = scanner.nextLine();
+            try {
+                answer = Integer.parseInt(input.trim());
+                if (answer < 1 || answer > 2) {
+                    throw new IllegalArgumentException("It must be between provided choices");
+                }
+            } catch (IllegalArgumentException e) {
+                System.out.println("Invalid input: " + e.getMessage());
+                answer =-1;
+            }
+        }while(answer == -1);
+        if(answer == 1){
+            return player.getActiveMonster().executAttack(player.getActiveMonster().chooseAttack(scanner), target);
+        }else{
+            return showHand(player);
+        }
     }
 }
 //
