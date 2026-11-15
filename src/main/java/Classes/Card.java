@@ -1,9 +1,9 @@
 package Classes;
 
-abstract class ObjectCard {
+public abstract class Card {
     protected String name;
 
-    public ObjectCard(String name) {
+    public Card(String name) {
         this.name = name;
     }
 }

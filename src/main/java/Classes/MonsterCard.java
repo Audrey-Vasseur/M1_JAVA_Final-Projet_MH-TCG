@@ -3,25 +3,27 @@ package Classes;
 import Classes.Enum.Element;
 import Classes.Enum.Token;
 import java.util.ArrayList;
+import java.util.Collections;
 
-abstract class MonsterCard {
-    protected String name;
+public abstract class MonsterCard extends Card{
     protected int HP;
     protected int maxHP;
     protected Element weakness;
-    protected int retreatCost;
+    protected ArrayList<Element> retreatCost;
     protected int rarity;
     protected ArrayList<Token> tokens;
+    protected Player owner;
 
     // To create a basic card with no attacks (they'll be created for each monster directly)
-    public MonsterCard(String name, int maxHP, Element weakness, int retreatCost, int rarity){
-        this.name = name;
+    public MonsterCard(String name, int maxHP, Element weakness, int retreatCost, int rarity, Player owner){
+        super(name);
         this.HP = maxHP;
         this.maxHP = maxHP;
         this.weakness = weakness;
-        this.retreatCost = retreatCost ;
+        this.retreatCost = new ArrayList<Element>(Collections.nCopies(retreatCost,Element.Elementless)) ;
         this.rarity = rarity;
         this.tokens = new ArrayList<Token>();
+        this.owner = owner;
     }
 
     // Getters
@@ -38,7 +40,7 @@ abstract class MonsterCard {
         return weakness;
     }
     
-    public int getRetreatCost(){
+    public ArrayList<Element> getRetreatCost(){
         return retreatCost;
     }
 
@@ -50,29 +52,12 @@ abstract class MonsterCard {
     public void setHP(int HP) {
         this.HP = HP;
     }
-    protected void setWeakness(Element weakness){
-        this.weakness = weakness;
-    }
-
-    protected void setRetreatCost(int retreatCost){
-        this.retreatCost = retreatCost;
-    }
-
-    protected void setRarity(int rarity){
-        this.rarity = rarity;
-    }
-
-
 
     /*
-    Methods for all Monsters
-      I. loseHP
-      II. recoverHP
-      III. monsterRetreat
-      IV. blight --> affected by something (poison, fire etc)
-
+    METHODS FOR ALL MONSTERS
     */
 
+    // loseHP --> when a Monster takes damage
     public int loseHP(int damageReceived, Element element) {
         if(this.weakness == element){
             damageReceived+=20;
@@ -81,11 +66,13 @@ abstract class MonsterCard {
         return damageReceived;
     }
 
+    // recoverHP --> when a Monster heals himself or use an object to heal
     public int recoverHP(int HPReceived){
         HP += HPReceived;
         return HPReceived;
     }
 
+    // retreatCostCalcul --> if the retreatCost changes due to some affliction
     public int retreatCostCalcul(int retreatCost){
         int realRetreatCost = retreatCost;
         if(tokens.contains(Token.Iceblight)){
@@ -94,6 +81,14 @@ abstract class MonsterCard {
         return realRetreatCost;
     }
 
+    public void retreat(int to){
+        owner.useManaElement(retreatCost);
+        owner.moveCardOnBoard(0, to);
+    }
+
+
+
+    // AddToken --> used to add tokens of affliction to a Monster
     public void AddToken(Token token){
         tokens.add(token);
     }
@@ -103,6 +98,7 @@ abstract class MonsterCard {
         }
     }
 
+    //
     protected ArrayList<Element> ALBuilder(int fire, int water, int ice, int thunder, int dragon, int elementless){
         ArrayList<Element> list = new ArrayList<>();
         for (int i = 0; i < fire; i++){

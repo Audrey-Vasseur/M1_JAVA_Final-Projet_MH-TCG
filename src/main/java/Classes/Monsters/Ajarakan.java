@@ -1,18 +1,17 @@
-package Classes;
+package Classes.Monsters;
 
 import Classes.Enum.Element;
 import Classes.Enum.Token;
-
-import java.util.ArrayList;
+import Classes.MonsterCard;
+import Classes.Player;
 
 public class Ajarakan extends MonsterCard {
     private static final int firstAttackDamage = 30;
     private static final int secondAttackDamage = 40;
     private static final int thirdAttackDamage = 80;
-    private Player owner;
 
-    public Ajarakan() {
-        super("Ajarakan", 90, Element.Water, 2, 1);
+    public Ajarakan(Player owner) {
+        super("Ajarakan", 90, Element.Water, 2, 1, owner);
     }
 
     // 1st attack: Power Punch

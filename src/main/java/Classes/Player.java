@@ -7,22 +7,69 @@ import java.util.Collections;
 
 public class Player {
     protected String name;
-    protected ArrayList<MonsterCard> deck;
-    protected ArrayList<ObjectCard> objects;
+    protected ArrayList<Card> deck;
+    protected ArrayList<ConsumableCard> consumables;
+    protected ArrayList<Card> hand;
+    protected ArrayList<Card> board;
+    protected ArrayList<Card> cemetery;
     protected int points;
     protected ArrayList<Element> manaPool;
+    protected ArrayList<Element> manaTypes;
 
-    public Player(String name, ArrayList<MonsterCard> deck, ArrayList<ObjectCard> objects) {
+    public Player(String name, ArrayList<Card> deck, ArrayList<ConsumableCard> consumables, ArrayList<Element> manaTypes) {
         this.name = name;
         this.deck = deck;
-        this.objects = objects;
+        this.consumables = consumables;
         this.points = 0;
         this.manaPool = new ArrayList<>();
+        this.manaTypes = manaTypes;
+        this.hand = new ArrayList<>();
+        this.board = new ArrayList<>(Collections.nCopies(4,null));
+        this.cemetery = new ArrayList<>();
     }
-    Player(String name){
-        this(name, new ArrayList<MonsterCard>(), new ArrayList<ObjectCard>());
+    public Player(String name){
+        this(name, new ArrayList<Card>(), new ArrayList<ConsumableCard>(), new ArrayList<Element>());
     }
 
+    public void setDeck(ArrayList<Card> deck) {
+        this.deck = deck;
+    }
+
+    public ArrayList<Card> getHand() {
+        return hand;
+    }
+
+    public ArrayList<Card> getBoard() {
+        return board;
+    }
+
+    public ArrayList<Card> getCemetery() {
+        return cemetery;
+    }
+
+    public ArrayList<Card> getDeck() {
+        return deck;
+    }
+
+    public ArrayList<ConsumableCard> getConsumables() {
+        return consumables;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public ArrayList<Element> getManaPool() {
+        return manaPool;
+    }
+
+    public ArrayList<Element> getManaTypes() {
+        return manaTypes;
+    }
+
+    public void addToDeck(Card card){
+        deck.add(card);
+    }
     public void addMana(Element element){
         manaPool.add(element);
     }
@@ -79,5 +126,77 @@ public class Player {
 
     public void addPoint(int point){
         this.points += point;
+        System.out.println("You gained "+ point + " point!");
+    }
+
+    // Move a card from hand to board
+    public void handToBoard(int index){
+        board.add(hand.remove(index));
+    }
+
+    // Move cards on the board
+    public void moveCardOnBoard(int from, int to){
+        Collections.swap(board, from, to);
+    }
+
+    // Draw a card from the deck
+    public void drawCard(){
+        if(!deck.isEmpty()) {
+            hand.add(deck.removeFirst());
+        }
+    }
+
+    // Draw MonsterCard
+    public void drawMonster(){
+        if(!deck.isEmpty()) {
+            for(int i = 0; i < deck.size(); i++){
+                if(deck.get(i) instanceof MonsterCard){
+                    hand.add(deck.remove(i));
+                    break;
+                }
+            }
+            shuffleDeck();
+        }
+    }
+
+    // InitialDraw: give 5 cards from the deck to the player's hand with a guaranteed Monster
+    public void initialD(){
+        for(int i = 0; i < 4 ;i++){
+           drawCard();
+        }
+        if(hand.stream().anyMatch(obj -> obj instanceof MonsterCard)){
+            drawCard();
+        }else{
+            drawMonster();
+            Collections.shuffle(hand);
+        }
+    }
+
+    // shuffle the deck
+    public void shuffleDeck(){
+        Collections.shuffle(deck);
+    }
+
+    // Bury a Card (cemetery)
+    public void sendToCemetery(Card card){
+        hand.remove(card);
+        board.remove(card);
+        cemetery.add(card);
+        System.out.println("Your card was sent to the Cemetery!");
+    }
+
+    public String CardtoString(ArrayList<Card> list){
+        String strBuilder = "";
+        for (int i = 0; i < list.size();i++){
+            strBuilder+= list.get(i).name + ", ";
+        }
+        return strBuilder;
+    }
+    public String ElementtoString(ArrayList<Element> list){
+        String strBuilder = "";
+        for (int i = 0; i < list.size();i++){
+            strBuilder+= list.get(i).toString() + ", ";
+        }
+        return strBuilder;
     }
 }
