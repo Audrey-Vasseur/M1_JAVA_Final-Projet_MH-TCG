@@ -4,7 +4,6 @@ import Classes.CSV.CSVModel;
 import Classes.CSV.CSVService;
 import Classes.Enum.Element;
 import Classes.Enum.Token;
-import kotlin.time.Clock;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -226,6 +225,7 @@ public abstract class MonsterCard extends Card {
         int i =1;
         for (ArrayList<String> move : moves){
             str += i +"- " + move.getFirst()+" ";
+            i++;
         }
         System.out.println(str);
         int answer = -1;
@@ -244,6 +244,7 @@ public abstract class MonsterCard extends Card {
         return answer;
     }
     protected int attack1(MonsterCard enemy){
+        System.out.println("Attack 1");
         return 0;
     }
     protected int attack2(MonsterCard enemy){
@@ -255,7 +256,7 @@ public abstract class MonsterCard extends Card {
     protected int attack4(MonsterCard enemy){
         return 0;
     }
-    protected int executAttack(int attackNumber, Player target){
+    protected int executeAttack(int attackNumber, Player target){
         switch (attackNumber){
             case 1:
                 return attack1(target.getActiveMonster());

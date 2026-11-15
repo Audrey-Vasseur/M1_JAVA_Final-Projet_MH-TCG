@@ -54,7 +54,7 @@ public class Main {
             int turnNumber = 1;
             boolean playerHasPlayed = false;
             while(!somebodyHasWon(players)) {
-                System.out.println("------- ROUND "+ turnNumber + " ------ ");
+                System.out.println("\n\n------- ROUND "+ turnNumber + " ------ ");
                 playerHasPlayed = false;
                 System.out.println("- " + players.getFirst().getName() + " -");
                 do{
@@ -63,6 +63,7 @@ public class Main {
                     };
                 }while(!playerHasPlayed);
                 playerHasPlayed = false;
+                System.out.println("\n\n- " + players.getLast().getName() + " -");
                 do{
                     if(board.startTurn(players.getLast(),players.getFirst()) != -1){
                         playerHasPlayed = true;

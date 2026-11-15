@@ -150,7 +150,12 @@ public class Player {
 
     // Move a card from hand to board
     public boolean handToBoard(int index){
-        return board.add(hand.remove(index));
+        int idxOfNull = board.indexOf(null);
+        if(idxOfNull != -1){
+            board.set(idxOfNull,hand.remove(index));
+            return true;
+        }
+        return false;
     }
 
     // Move cards on the board

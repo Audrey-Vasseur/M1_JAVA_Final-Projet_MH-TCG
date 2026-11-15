@@ -105,7 +105,7 @@ public class Board {
         player2.initialD();
         System.out.println("START");
         try {
-            TimeUnit.SECONDS.sleep(3);
+            TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -191,6 +191,7 @@ public class Board {
         int i =1;
         for (Card card : player.getHand()){
             str += i +"- " + card +" ";
+            i++;
         }
         System.out.println(str);
         int answer = -1;
@@ -198,7 +199,7 @@ public class Board {
             String input = scanner.nextLine();
             try {
                 answer = Integer.parseInt(input.trim());
-                if (answer < 1 || answer > player.getHand().size()-1) {
+                if (answer < 1 || answer > player.getHand().size()) {
                     throw new IllegalArgumentException("It must be between provided choices");
                 }
             } catch (IllegalArgumentException e) {
@@ -206,8 +207,11 @@ public class Board {
                 answer =-1;
             }
         }while(answer == -1);
+        answer--;
         if(player.getHand().get(answer) instanceof MonsterCard){
+            System.out.println("Essaye de mettre dans le board");
             if(player.handToBoard(answer)){
+
                 return 1;
             }
             return -1;
@@ -242,7 +246,7 @@ public class Board {
             }
         }while(answer == -1);
         if(answer == 1){
-            return player.getActiveMonster().executAttack(player.getActiveMonster().chooseAttack(scanner), target);
+            return player.getActiveMonster().executeAttack(player.getActiveMonster().chooseAttack(scanner), target);
         }else{
             return showHand(player);
         }
