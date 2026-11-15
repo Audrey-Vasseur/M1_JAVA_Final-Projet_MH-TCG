@@ -50,7 +50,7 @@ Once you clone the repository, go to the Main file. Click on the green arrow and
 <details>
 <summary>More informations below</summary>
 <br>
-
+All cars herits from MonsterCard or ItemCard, themself heriting Card
 </details>
 
 ## VII. Polymorphism
@@ -58,6 +58,7 @@ Once you clone the repository, go to the Main file. Click on the green arrow and
 <details>
 <summary>More informations below</summary>
 <br>
+A deck is composed of both MonsterCard and ItemCard because it is a List of Cards
 
 </details>
 
