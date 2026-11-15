@@ -11,32 +11,44 @@ public class Ajarakan extends MonsterCard {
     private static final int thirdAttackDamage = 80;
 
     public Ajarakan(Player owner) {
-        super("Ajarakan", 90, Element.Water, 2, 1, owner);
+        super("Ajarakan", 2, 1, owner);
     }
 
     // 1st attack: Power Punch
     public int PowerPunch(MonsterCard enemy){
-        System.out.println("Ajarakan uses Power Punch!");
-        System.out.println("It deals "+firstAttackDamage+" damage to the opponent's Monster!");
-        owner.useManaElement(Element.Elementless);
-        return enemy.loseHP(firstAttackDamage, Element.Elementless);
+        if(owner.useManaElement(Element.Elementless)) {
+            System.out.println("Ajarakan uses Power Punch!");
+            System.out.println("It deals " + firstAttackDamage + " damage to the opponent's Monster!");
+            return enemy.loseHP(firstAttackDamage, Element.Elementless);
+        }else{
+            System.out.println("You don't have enough Elements to use Power Punch!");
+            return 0;
+        }
     }
 
     // 2nd attack: Shoulder Ram --> apply 1 Blastblight Token
     public int ShoulderRam(MonsterCard enemy){
-        System.out.println("Ajarakan uses Shoulder Ram!");
-        System.out.println("It deals "+secondAttackDamage+" damage to the opponent's Monster!");
-        owner.useManaElement(ALBuilder(2,0,0,0,0,1));
-        enemy.AddToken(Token.Blastblight);
-        return enemy.loseHP(secondAttackDamage, Element.Fire);
+        if(owner.useManaElement(ALBuilder(2,0,0,0,0,1))) {
+            System.out.println("Ajarakan uses Shoulder Ram!");
+            System.out.println("It deals " + secondAttackDamage + " damage to the opponent's Monster!");
+            enemy.AddToken(Token.Blastblight);
+            return enemy.loseHP(secondAttackDamage, Element.Fire);
+        }else{
+            System.out.println("You don't have enough Elements to use Shoulder Ram!");
+            return 0;
+        }
     }
 
     // 3rd attack: Blasting Star --> apply 2 Blastblight Token
     public int BlastingStar(MonsterCard enemy){
-        System.out.println("Ajarakan uses Blasting Star!");
-        System.out.println("It deals "+thirdAttackDamage+" damage to the opponent's Monster!");
-        owner.useManaElement(ALBuilder(2,0,0,0,0,2));
-        enemy.AddToken(Token.Blastblight);
-        return enemy.loseHP(thirdAttackDamage, Element.Fire);
+        if(owner.useManaElement(ALBuilder(2,0,0,0,0,2))) {
+            System.out.println("Ajarakan uses Blasting Star!");
+            System.out.println("It deals " + thirdAttackDamage + " damage to the opponent's Monster!");
+            enemy.AddToken(Token.Blastblight);
+            return enemy.loseHP(thirdAttackDamage, Element.Fire);
+        }else{
+            System.out.println("You don't have enough Elements to use Blasting Star!");
+            return 0;
+        }
     }
 }

@@ -11,7 +11,7 @@ public class Barioth extends MonsterCard {
     private static final int thirdAttackDamage = 50;
 
     public Barioth(Player owner) {
-        super("Barioth", 80, Element.Ice, 2, 1, owner);
+        super("Barioth", 2, 1, owner);
     }
 
     // 1st attack: Lunging Bite

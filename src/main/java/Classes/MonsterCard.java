@@ -1,5 +1,7 @@
 package Classes;
 
+import Classes.CSV.CSVModel;
+import Classes.CSV.CSVService;
 import Classes.Enum.Element;
 import Classes.Enum.Token;
 import java.util.ArrayList;
@@ -8,22 +10,37 @@ import java.util.Collections;
 public abstract class MonsterCard extends Card{
     protected int HP;
     protected int maxHP;
-    protected Element weakness;
+    protected ArrayList<Element> weakness;
     protected ArrayList<Element> retreatCost;
     protected int rarity;
     protected ArrayList<Token> tokens;
     protected Player owner;
 
     // To create a basic card with no attacks (they'll be created for each monster directly)
-    public MonsterCard(String name, int maxHP, Element weakness, int retreatCost, int rarity, Player owner){
+//    public MonsterCard(String name, int maxHP, Element weakness, int retreatCost, int rarity, Player owner){
+//        super(name);
+//        this.HP = maxHP;
+//        this.maxHP = maxHP;
+//        this.weakness = weakness;
+//        this.retreatCost = new ArrayList<Element>(Collections.nCopies(retreatCost,Element.Elementless)) ;
+//        this.rarity = rarity;
+//        this.tokens = new ArrayList<Token>();
+//        this.owner = owner;
+//    }
+
+    public MonsterCard(String name, int retreatCost, int rarity, Player owner){
+        CSVModel data = CSVService.getCardByName(name);
         super(name);
-        this.HP = maxHP;
-        this.maxHP = maxHP;
-        this.weakness = weakness;
-        this.retreatCost = new ArrayList<Element>(Collections.nCopies(retreatCost,Element.Elementless)) ;
+        this.retreatCost = new ArrayList<Element>(Collections.nCopies(retreatCost,Element.Elementless));
         this.rarity = rarity;
         this.tokens = new ArrayList<Token>();
         this.owner = owner;
+
+        if(data != null){
+            this.HP = data.getHealthpoints();
+            this.maxHP = data.getHealthpoints();
+            this.weakness = data.getWeakness();
+        }
     }
 
     // Getters
@@ -36,7 +53,7 @@ public abstract class MonsterCard extends Card{
         return HP;
     }
 
-    public Element getWeakness() {
+    public ArrayList<Element> getWeakness() {
         return weakness;
     }
     
@@ -59,7 +76,7 @@ public abstract class MonsterCard extends Card{
 
     // loseHP --> when a Monster takes damage
     public int loseHP(int damageReceived, Element element) {
-        if(this.weakness == element){
+        if(this.weakness.contains(element)){
             damageReceived+=20;
         }
         HP -=damageReceived;
@@ -121,4 +138,6 @@ public abstract class MonsterCard extends Card{
         }
         return list;
     }
+
+
 }

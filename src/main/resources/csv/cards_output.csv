@@ -1,80 +1,80 @@
-subname,name,hitpoints,weakness,retreatCost,rarity,moves  (name damage elementamount elementname)
-,Agnaktor,90,Water_Element,2,one-diamond,
-,Ajarakan,90,Water_Element,2,one-diamond,Power Punch 30 1 Colorless / Shoulder Ram 40 2 Fire_Element 1 Colorless / Blasting Star 80 2 Fire_Element 2 Colorless
-,Aknosom,60,Water_Element,2,one-diamond,Backward Kick 20 1 Colorless / Fire Ball 30 2 Fire_Element
-,Alatreon,400,,5,four-diamonds,Escaton Judgement / Dragon Blast 120 2 Dragon_Element 1 Dragon_Element / Thunder Rain 120 3 Thunder_Element / Fire Beam 120 3 Fire_Element / Ice Breath 120 3 Ice_Element / Water Cannon 120 3 Water_Element
-,Almudron,70,Fire_Element,2,one-diamond,Compacted Mud / Tail Slam 30 2 Colorless / Mud Whirl 10 3 Water_Element
-,Amatsu,140,Dragon_Element,4,three-diamonds,Water Spheres 60 2 Water_Element / Typhoon 80 3 Colorless / Thunderstrikes 40 4 Thunder_Element / Lightning Nova 180 2 Water_Element 2 Thunder_Element 2 Colorless
-,Anjanath,70,Water_Element,2,one-diamond,Fire Sneeze 20 2 Fire_Element / Tail Swipe 40 2 Colorless / Dragging Bite 60 3 Colorless
-,Arkveld,140,Dragon_Element,3,two-diamonds,Absorb / Chain Blade 40 2 Colorless / Dragon Burst 80 4 Dragon_Element
-,Astalos,90,Ice_Element,2,two-diamonds,Wing Slam 20 1 Colorless / Thunder Lazer 40 2 Thunder_Element / Charged Horn 70 3 Thunder_Element
-,Balahara,60,Thunder_Element,1,one-diamond,Pack / Tail Sweep 20 1 Colorless / Mucus 30 2 Water_Element / Quicksand 50 3 Colorless
-,Barioth,80,Fire_Element,2,one-diamond,Lunging Bite 20 1 Colorless / Tail Sweep 40 2 Colorless / Ice Tornado 50 3 Ice_Element
-,Barroth,130,Fire_Element,1,one-diamond,Mud Adept / Mud Bath 1 Water_Element / Shake Off 1 Colorless / Charge 20 1 Colorless
-,Basarios,130,Dragon_Element,3,one-diamond,Tough Skin / Fire Gaz 10 1 Fire_Element / Poisonous Gas 10 2 Colorless / Sleep Gaz 3 Colorless
-,Bazelgeuse,90,Thunder_Element,2,one-diamond,Ambush / Explosive Seeds 30 2 Fire_Element / Kamikaze Bomber 50 2 Fire_Element 1 Colorless
-,Beotodus,70,Fire_Element,2,one-diamond,Snow Pack 30 1 Ice_Element / Horn Strike 50 1 Ice_Element 1 Colorless
-,Bishaten,60,Ice_Element,1,one-diamond,Fruits / Rotten Fruit 10 1 Colorless / Whirlwind Dash 20 1 Colorless / Multi-Fruit Barrage 10 3 Colorless
-,Brachydios,130,Water_Element,3,two-diamonds,Intense Rage / Horn Smash 40 1 Fire_Element / Tail Whip 70 3 Colorless / Pounds 100 2 Fire_Element 2 Colorless
-,Chameleos,140,Fire_Element,0,three-diamonds,Invisible / One-way Flow 40 1 Colorless / Feeling Numb 4 Colorless
-,Chaotic Gore Magala,220,Dragon_Element,3,shining,Chaotic Frenzy / Chaotic Explosion 80 4 Colorless / Frenzy Mist 50 4 Colorless
-Charged,Rajang,110,Ice_Element,3,shining,Elder Dragon Predator / Steaming Punch 40 1 Colorless / Lightning Spit 70 3 Thunder_Element / Thunder Beam 110 4 Thunder_Element
-Charged ,Zinogre,130,Ice_Element,4,shining,Great Thunderbug / Amped Charge 60 2 Thunder_Element / Electric Arc 90 3 Thunder_Element / Thunderbug Discharge 150 4 Thunder_Element
-,Chatacabra,80,Thunder_Element,1,one-diamond,Sticky Punch 10 1 Colorless
-,Crimson Fatalis,400,Dragon_Element,5,four-diamonds,Heat Waves 30 1 Fire_Element / Meteors 40 1 Fire_Element / Fire Breath 90 3 Fire_Element
-,Crimson Glow Valstrax,160,CrimsonGlow_Weakness,2,three-diamonds,Ambush / World Tour 2 Colorless / Wingblade Thrusts 50 2 Colorless / Dragon Beam 90 3 Dragon_Element
-,Daimyo Hermitaur,100,Thunder_Element,2,one-diamond,Hard Shell / Piercing Charge 20 1 Colorless / Water Beam 40 2 Water_Element
-,Dalamadur,210,Dragon_Element,3,three-diamonds,Tongue Flicking 20 1 Colorless / Unhinged Bite 40 2 Colorless / Stomp 120 4 Colorless
-,Deviljho,130,Deviljo_Weakness,4,two-diamonds,Always Hungry / Dragon Breath 70 3 Dragon_Element / Devil's Jaw 120 4 Colorless
-,Diablos,80,Ice_Element,2,one-diamond,Deadly Tunnels 20 1 Colorless / Pointy Charge 40 2 Colorless / Tail Slam 40 3 Colorless
-,Doshaguma,90,Fire_Element,2,one-diamond,Berserker Rage / Bite 20 1 Colorless / Boulder Throw 40 2 Colorless / Body Slam 60 3 Colorless
-,Espinas,130,Ice_Element,3,two-diamonds,Heavy Sleeper / Blight Breath 40 1 Fire_Element 2 Colorless / Dragging Charge 70 3 Colorless
-,Fatalis,400,Dragon_Element,5,four-diamonds,Fire Cone 80 3 Fire_Element / Circular Flame 120 4 Fire_Element / Schrade's Demise 150 5 Fire_Element
-,Gaismagorm,190,Dragon_Element,4,three-diamonds,Qurio Spreading / Collect One's Due / Abyssal Vacuum 60 2 Colorless / Archdemon Laser 120 4 Colorless
-,Gigginox,80,Fire_Element,2,one-diamond,Giggi Sac / Poisonous Mist 10 2 Colorless / Body Slam 30 2 Colorless
-,Glavenus,120,Water_Element,3,two-diamonds,Sharpened Blade / Heated Blade / Tail Slash 40 2 Colorless / Ultimate Tail Spin 90 4 Colorless
-,Gogmazios,200,Dragon_Element,2,three-diamonds,Tared Environment / Heavy Stomp 70 2 Colorless / Fire Beam 70 3 Fire_Element / Tar Meteor Shower 150 5 Fire_Element
-,Gore Magala,150,Fire_Element,2,two-diamonds,Evolution / Frenzy Virus / Stomp 50 2 Colorless / Frenzy Ball 30 3 Colorless
-,Goss Harag,70,Fire_Element,2,one-diamond,Ice Blade / Ice Mace / Arm Swing 20 1 Colorless / Ice Beam 30 2 Ice_Element / Crushing Leap 50 3 Colorless
-,Gravios,170,Water_Element,3,two-diamonds,Rocky Skin / Poisonous Gas 10 2 Colorless / Fire Beam 40 2 Fire_Element / Sleep Gaz 3 Colorless
-,Great Baggi,50,Fire_Element,1,one-diamond,Swarm / Side Tackle 20 1 Colorless / Sleep Spit 2 Colorless
-,Great Izuchi,50,Thunder_Element,1,one-diamond,Swarm / Spining Tail 20 1 Colorless / Hanging Threat 40 2 Colorless
-,Great Jagras,50,Fire_Element,1,one-diamond,Dinner Time / Acid Regurgitations 0 / Bite 10 1 Colorless / Scratch 30 2 Colorless / Body Slam 50 3 Colorless
-,Great Wroggi,50,Ice_Element,1,one-diamond,Swarm / Whipping Tail 20 1 Colorless / Poison Cloud 10 2 Colorless
-,Guardian Doshaguma,90,Fire_Element,2,one-diamond,Guardian / Bite 20 1 Colorless / Body Slam 50 2 Colorless
-,Guardian Ebony Odogaron,80,Dragon_Element,1,one-diamond,Guardian / Claw Strike 20 1 Colorless / Dragon Bite 50 2 Dragon_Element 1 Colorless
-,Guardian Fulgur Anjanath,80,Ice_Element,3,one-diamond,Guardian / Delayed Thunder Clap / Stomp 20 2 Colorless / Dragging Bite 60 4 Colorless
-,Guardian Rathalos,140,Dragon_Element,2,two-diamonds,Guardian / Ruthless Charge 50 2 Colorless / Flamethrower 70 3 Fire_Element
-,Gypceros,60,Fire_Element,1,one-diamond,Apparent Death / Viscous Poison 20 1 Colorless / Flashbang 2 Colorless
-,Hirabami,60,Hirabami_Weakness,1,one-diamond,One For All / Ice Spit 20 1 Ice_Element 1 Colorless / Rasor Tail 40 2 Colorless / Spin Smash 60 3 Colorless
-,Jin Dahaad,110,Fire_Element,3,one-diamond,Sweeping Breath 40 2 Ice_Element / Body Slam 50 3 Colorless / Ice Nova 100 5 Ice_Element
-,Khezu,90,Fire_Element,2,one-diamond,Thunder Ball 20 1 Thunder_Element / Thunder Dome 30 2 Thunder_Element / Slow Killer 30 3 Thunder_Element
-,Kirin,140,Fire_Element,2,three-diamonds,Harden Scales / Thunder Lord / Thunderstrike 60 2 Thunder_Element / Thunder Storm 4 Thunder_Element
-,Kushala Daora,160,Thunder_Element,4,three-diamonds,Wind Barrier / Wind Blast 40 1 Colorless / Infernal Tornado 3 Colorless / Hurricane 80 2 Dragon_Element 2 Colorless
-,Lagiacrus,150,Fire_Element,2,two-diamonds,Charged Up / Hip Check 50 2 Colorless / Electric Discharge 100 4 Thunder_Element
-,Lagombi,60,Fire_Element,1,one-diamond,Renforced Rear / Snow Surf 20 1 Colorless / Giant Snowball 30 2 Ice_Element
-,Lala Barina,60,Fire_Element,1,one-diamond,Florets Scattering 10 1 Colorless / Dancing Claws 20 1 Colorless / Paralyzing Thorn 30 2 Colorless
-,Legiana,80,Thunder_Element,2,one-diamond,Ice Residue / Ice Ring 30 2 Ice_Element / Tail Slam 60 3 Colorless
-,Lunastra,140,Ice_Element,3,three-diamonds,Blue Hell / Flame Sweeps 50 2 Fire_Element / Hellflare 70 4 Fire_Element
-,Magnamalo,150,Water_Element,3,two-diamonds,Hellfire Rain 40 1 Fire_Element 1 Colorless / Dust Blast 30 2 Fire_Element 1 Colorless / Hellfire Rifle 100 2 Fire_Element 2 Colorless
-,Malzeno,110,Dragon_Element,0,three-diamonds,Teleport / Piercing Tail 20 1 Colorless / Qurio 70 2 Dragon_Element 1 Colorless
-,Mizutsune,140,Thunder_Element,2,two-diamonds,Bubble Dance 30 1 Water_Element / Water Beam 50 2 Water_Element / Rising Spin Tail 80 3 Colorless
-,Nargacuga,110,Thunder_Element,1,two-diamonds,Evade / Tail Spikes 30 1 Colorless / Wing Blade Slash 80 3 Colorless
-,Nergigante,150,Thunder_Element,3,three-diamonds,Regeneration / Claw Sweep 40 1 Colorless / Piercing Horn 70 2 Colorless / Dive Bomb 130 3 Colorless
-,Nerscylla,90,Fire_Element,2,one-diamond,Natural Predator / Tranquilizing Stinger 2 Colorless / Poisonous Jaw 20 2 Colorless / Death From Above 30 2 Colorless
-,Paolumu,60,Fire_Element,1,one-diamond,Tail Slam 20 1 Colorless / Airborne Dive 40 2 Colorless
-,Pukei-Pukei,50,Thunder_Element,1,one-diamond,Mushroom Based Diet / Tongue Whip 20 1 Colorless / Poisonous Mist 20 2 Colorless
-,Quematrice,60,Water_Element,2,one-diamond,Peck 20 1 Colorless / Fan Flame 30 2 Fire_Element / Tail Sweep 40 1 Fire_Element 1 Colorless
-,Qurupeco,60,Ice_Element,1,one-diamond,Cry For Help / Peck 10 2 Colorless
-,Rajang,110,Ice_Element,3,two-diamonds,Elder Dragon Predator / Charged Up / Monkey Jab 10 1 Colorless / Crushing Grab 50 2 Colorless
-,Rathalos,150,Dragon_Element,2,two-diamonds,Fire Ball 50 2 Fire_Element / Flamethrower 80 3 Fire_Element
-,Rathian,100,Dragon_Element,2,one-diamond,Tail Flip 30 2 Colorless / Fire Ball 30 2 Fire_Element
-,Rey Dau,90,Ice_Element,3,one-diamond,Wing Slash 50 2 Colorless / Lightning Bolt 70 2 Thunder_Element 1 Colorless / Thunder Blast 130 4 Thunder_Element
-,Royal Ludroth,60,Fire_Element,1,one-diamond,Swarm / Water Charge 20 1 Water_Element / Roll 40 2 Colorless
-,Savage Deviljho,160,Thunder_Element,4,three-diamonds,Endless Appetite / Draconic Cloud 80 3 Dragon_Element / Monster Throw 70 5 Colorless
-,Seregios,120,Thunder_Element,0,two-diamonds,Flying Scratches / Tail Slam 30 1 Colorless / Piercing Scales 20 2 Colorless / Acrobatic Claws 80 3 Colorless
-,Shagaru Magala,300,Dragon_Element,4,shining,Frenzy Virus / Body Slam 70 3 Colorless / Frenzy Laser 150 5 Colorless
-,Teostra,140,Water_Element,3,three-diamonds,Flame Aura / Explosive Snap 50 3 Fire_Element / Supernova 120 4 Fire_Element / Mate For Life 200 6 Fire_Element
-,Tigrex,140,Thunder_Element,2,two-diamonds,Concussive Roar 30 1 Colorless / Charge 60 2 Colorless / Land Boulder 50 3 Colorless
-,Xu Wu,70,Ice_Element,2,one-diamond,Top-down Predation / Golden Spike 20 1 Colorless / Grim Reaper 10 3 Colorless
-,Zinogre,130,Ice_Element,3,three-diamonds,Thunderbug's Howl / Paw Slams 30 1 Colorless / Tail Slam 50 2 Colorless / Fulgor Shot 70 3 Thunder_Element
+subname,name,healthpoints,weakness,retreatCost,rarity,moves
+,Agnaktor,90,Water,2,1,
+,Ajarakan,90,Water,2,1,Power_Punch 30 1 Colorless / Shoulder_Ram 40 2 Fire 1 Colorless / Blasting_Star 80 2 Fire 2 Colorless
+,Aknosom,60,Water,2,1,Backward Kick 20 1 Colorless / Fire_Ball 30 2 Fire
+,Alatreon,400,,5,4,Escaton Judgement / Dragon_Blast 120 2 Dragon 1 Dragon / Thunder Rain 120 3 Thunder / Fire Beam 120 3 Fire / Ice Breath 120 3 Ice / Water Cannon 120 3 Water
+,Almudron,70,Fire,2,1,Compacted Mud / Tail Slam 30 2 Colorless / Mud Whirl 10 3 Water
+,Amatsu,140,Dragon,4,3,Water Spheres 60 2 Water / Typhoon 80 3 Colorless / Thunderstrikes 40 4 Thunder / Lightning Nova 180 2 Water 2 Thunder 2 Colorless
+,Anjanath,70,Water,2,1,Fire Sneeze 20 2 Fire / Tail Swipe 40 2 Colorless / Dragging Bite 60 3 Colorless
+,Arkveld,140,Dragon,3,2,Absorb / Chain Blade 40 2 Colorless / Dragon Burst 80 4 Dragon
+,Astalos,90,Ice,2,2,Wing Slam 20 1 Colorless / Thunder Lazer 40 2 Thunder / Charged Horn 70 3 Thunder
+,Balahara,60,Thunder,1,1,Pack / Tail Sweep 20 1 Colorless / Mucus 30 2 Water / Quicksand 50 3 Colorless
+,Barioth,80,Fire,2,1,Lunging Bite 20 1 Colorless / Tail Sweep 40 2 Colorless / Ice Tornado 50 3 Ice
+,Barroth,130,Fire,1,1,Mud Adept / Mud Bath 1 Water / Shake Off 1 Colorless / Charge 20 1 Colorless
+,Basarios,130,Dragon,3,1,Tough Skin / Fire Gaz 10 1 Fire / Poisonous Gas 10 2 Colorless / Sleep Gaz 3 Colorless
+,Bazelgeuse,90,Thunder,2,1,Ambush / Explosive Seeds 30 2 Fire / Kamikaze Bomber 50 2 Fire 1 Colorless
+,Beotodus,70,Fire,2,1,Snow Pack 30 1 Ice / Horn Strike 50 1 Ice 1 Colorless
+,Bishaten,60,Ice,1,1,Fruits / Rotten Fruit 10 1 Colorless / Whirlwind Dash 20 1 Colorless / Multi-Fruit Barrage 10 3 Colorless
+,Brachydios,130,Water,3,2,Intense Rage / Horn Smash 40 1 Fire / Tail Whip 70 3 Colorless / Pounds 100 2 Fire 2 Colorless
+,Chameleos,140,Fire,0,3,Invisible / One-way Flow 40 1 Colorless / Feeling Numb 4 Colorless
+,Chaotic Gore Magala,220,Dragon,3,shining,Chaotic Frenzy / Chaotic Explosion 80 4 Colorless / Frenzy Mist 50 4 Colorless
+Charged,Rajang,110,Ice,3,shining,Elder Dragon Predator / Steaming Punch 40 1 Colorless / Lightning Spit 70 3 Thunder / Thunder Beam 110 4 Thunder
+Charged ,Zinogre,130,Ice,4,shining,Great Thunderbug / Amped Charge 60 2 Thunder / Electric Arc 90 3 Thunder / Thunderbug Discharge 150 4 Thunder
+,Chatacabra,80,Thunder,1,1,Sticky Punch 10 1 Colorless
+,Crimson Fatalis,400,Dragon,5,4,Heat Waves 30 1 Fire / Meteors 40 1 Fire / Fire Breath 90 3 Fire
+,Crimson Glow Valstrax,160,Fire/Ice/Thunder/Water,2,3,Ambush / World Tour 2 Colorless / Wingblade Thrusts 50 2 Colorless / Dragon Beam 90 3 Dragon
+,Daimyo Hermitaur,100,Thunder,2,1,Hard Shell / Piercing Charge 20 1 Colorless / Water Beam 40 2 Water
+,Dalamadur,210,Dragon,3,3,Tongue Flicking 20 1 Colorless / Unhinged Bite 40 2 Colorless / Stomp 120 4 Colorless
+,Deviljho,130,Dragon/Thunder,4,2,Always Hungry / Dragon Breath 70 3 Dragon / Devil's Jaw 120 4 Colorless
+,Diablos,80,Ice,2,1,Deadly Tunnels 20 1 Colorless / Pointy Charge 40 2 Colorless / Tail Slam 40 3 Colorless
+,Doshaguma,90,Fire,2,1,Berserker Rage / Bite 20 1 Colorless / Boulder Throw 40 2 Colorless / Body Slam 60 3 Colorless
+,Espinas,130,Ice,3,2,Heavy Sleeper / Blight Breath 40 1 Fire 2 Colorless / Dragging Charge 70 3 Colorless
+,Fatalis,400,Dragon,5,4,Fire Cone 80 3 Fire / Circular Flame 120 4 Fire / Schrade's Demise 150 5 Fire
+,Gaismagorm,190,Dragon,4,3,Qurio Spreading / Collect One's Due / Abyssal Vacuum 60 2 Colorless / Archdemon Laser 120 4 Colorless
+,Gigginox,80,Fire,2,1,Giggi Sac / Poisonous Mist 10 2 Colorless / Body Slam 30 2 Colorless
+,Glavenus,120,Water,3,2,Sharpened Blade / Heated Blade / Tail Slash 40 2 Colorless / Ultimate Tail Spin 90 4 Colorless
+,Gogmazios,200,Dragon,2,3,Tared Environment / Heavy Stomp 70 2 Colorless / Fire Beam 70 3 Fire / Tar Meteor Shower 150 5 Fire
+,Gore Magala,150,Fire,2,2,Evolution / Frenzy Virus / Stomp 50 2 Colorless / Frenzy Ball 30 3 Colorless
+,Goss Harag,70,Fire,2,1,Ice Blade / Ice Mace / Arm Swing 20 1 Colorless / Ice Beam 30 2 Ice / Crushing Leap 50 3 Colorless
+,Gravios,170,Water,3,2,Rocky Skin / Poisonous Gas 10 2 Colorless / Fire Beam 40 2 Fire / Sleep Gaz 3 Colorless
+,Great Baggi,50,Fire,1,1,Swarm / Side Tackle 20 1 Colorless / Sleep Spit 2 Colorless
+,Great Izuchi,50,Thunder,1,1,Swarm / Spining Tail 20 1 Colorless / Hanging Threat 40 2 Colorless
+,Great Jagras,50,Fire,1,1,Dinner Time / Acid Regurgitations 0 / Bite 10 1 Colorless / Scratch 30 2 Colorless / Body Slam 50 3 Colorless
+,Great Wroggi,50,Ice,1,1,Swarm / Whipping Tail 20 1 Colorless / Poison Cloud 10 2 Colorless
+,Guardian Doshaguma,90,Fire,2,1,Guardian / Bite 20 1 Colorless / Body Slam 50 2 Colorless
+,Guardian Ebony Odogaron,80,Dragon,1,1,Guardian / Claw Strike 20 1 Colorless / Dragon Bite 50 2 Dragon 1 Colorless
+,Guardian Fulgur Anjanath,80,Ice,3,1,Guardian / Delayed Thunder Clap / Stomp 20 2 Colorless / Dragging Bite 60 4 Colorless
+,Guardian Rathalos,140,Dragon,2,2,Guardian / Ruthless Charge 50 2 Colorless / Flamethrower 70 3 Fire
+,Gypceros,60,Fire,1,1,Apparent Death / Viscous Poison 20 1 Colorless / Flashbang 2 Colorless
+,Hirabami,60,Fire/Thunder,1,1,One For All / Ice Spit 20 1 Ice 1 Colorless / Rasor Tail 40 2 Colorless / Spin Smash 60 3 Colorless
+,Jin Dahaad,110,Fire,3,1,Sweeping Breath 40 2 Ice / Body Slam 50 3 Colorless / Ice Nova 100 5 Ice
+,Khezu,90,Fire,2,1,Thunder Ball 20 1 Thunder / Thunder Dome 30 2 Thunder / Slow Killer 30 3 Thunder
+,Kirin,140,Fire,2,3,Harden Scales / Thunder Lord / Thunderstrike 60 2 Thunder / Thunder Storm 4 Thunder
+,Kushala Daora,160,Thunder,4,3,Wind Barrier / Wind Blast 40 1 Colorless / Infernal Tornado 3 Colorless / Hurricane 80 2 Dragon 2 Colorless
+,Lagiacrus,150,Fire,2,2,Charged Up / Hip Check 50 2 Colorless / Electric Discharge 100 4 Thunder
+,Lagombi,60,Fire,1,1,Renforced Rear / Snow Surf 20 1 Colorless / Giant Snowball 30 2 Ice
+,Lala Barina,60,Fire,1,1,Florets Scattering 10 1 Colorless / Dancing Claws 20 1 Colorless / Paralyzing Thorn 30 2 Colorless
+,Legiana,80,Thunder,2,1,Ice Residue / Ice Ring 30 2 Ice / Tail Slam 60 3 Colorless
+,Lunastra,140,Ice,3,3,Blue Hell / Flame Sweeps 50 2 Fire / Hellflare 70 4 Fire
+,Magnamalo,150,Water,3,2,Hellfire Rain 40 1 Fire 1 Colorless / Dust Blast 30 2 Fire 1 Colorless / Hellfire Rifle 100 2 Fire 2 Colorless
+,Malzeno,110,Dragon,0,3,Teleport / Piercing Tail 20 1 Colorless / Qurio 70 2 Dragon 1 Colorless
+,Mizutsune,140,Thunder,2,2,Bubble Dance 30 1 Water / Water Beam 50 2 Water / Rising Spin Tail 80 3 Colorless
+,Nargacuga,110,Thunder,1,2,Evade / Tail Spikes 30 1 Colorless / Wing Blade Slash 80 3 Colorless
+,Nergigante,150,Thunder,3,3,Regeneration / Claw Sweep 40 1 Colorless / Piercing Horn 70 2 Colorless / Dive Bomb 130 3 Colorless
+,Nerscylla,90,Fire,2,1,Natural Predator / Tranquilizing Stinger 2 Colorless / Poisonous Jaw 20 2 Colorless / Death From Above 30 2 Colorless
+,Paolumu,60,Fire,1,1,Tail Slam 20 1 Colorless / Airborne Dive 40 2 Colorless
+,Pukei-Pukei,50,Thunder,1,1,Mushroom Based Diet / Tongue Whip 20 1 Colorless / Poisonous Mist 20 2 Colorless
+,Quematrice,60,Water,2,1,Peck 20 1 Colorless / Fan Flame 30 2 Fire / Tail Sweep 40 1 Fire 1 Colorless
+,Qurupeco,60,Ice,1,1,Cry For Help / Peck 10 2 Colorless
+,Rajang,110,Ice,3,2,Elder Dragon Predator / Charged Up / Monkey Jab 10 1 Colorless / Crushing Grab 50 2 Colorless
+,Rathalos,150,Dragon,2,2,Fire Ball 50 2 Fire / Flamethrower 80 3 Fire
+,Rathian,100,Dragon,2,1,Tail Flip 30 2 Colorless / Fire Ball 30 2 Fire
+,Rey Dau,90,Ice,3,1,Wing Slash 50 2 Colorless / Lightning Bolt 70 2 Thunder 1 Colorless / Thunder Blast 130 4 Thunder
+,Royal Ludroth,60,Fire,1,1,Swarm / Water Charge 20 1 Water / Roll 40 2 Colorless
+,Savage Deviljho,160,Thunder,4,3,Endless Appetite / Draconic Cloud 80 3 Dragon / Monster Throw 70 5 Colorless
+,Seregios,120,Thunder,0,2,Flying Scratches / Tail Slam 30 1 Colorless / Piercing Scales 20 2 Colorless / Acrobatic Claws 80 3 Colorless
+,Shagaru Magala,300,Dragon,4,shining,Frenzy Virus / Body Slam 70 3 Colorless / Frenzy Laser 150 5 Colorless
+,Teostra,140,Water,3,3,Flame Aura / Explosive Snap 50 3 Fire / Supernova 120 4 Fire / Mate For Life 200 6 Fire
+,Tigrex,140,Thunder,2,2,Concussive Roar 30 1 Colorless / Charge 60 2 Colorless / Land Boulder 50 3 Colorless
+,Xu Wu,70,Ice,2,1,Top-down Predation / Golden Spike 20 1 Colorless / Grim Reaper 10 3 Colorless
+,Zinogre,130,Ice,3,3,Thunderbug's Howl / Paw Slams 30 1 Colorless / Tail Slam 50 2 Colorless / Fulgor Shot 70 3 Thunder

@@ -107,20 +107,29 @@ public class Player {
         return true;
     }
 
-    public void useManaElement(Element element){
+    public boolean useManaElement(Element element){
         if(element != Element.Elementless){
-            manaPool.remove(element);
+            return manaPool.remove(element);
         } else{
-            manaPool.removeFirst();
+            if(!manaPool.isEmpty()) {
+                manaPool.removeFirst();
+                return true;
+            }else {
+                return false;
+            }
         }
     }
-    public void useManaElement(ArrayList<Element> manaPool, ArrayList<Element> elements){
+    public boolean useManaElement(ArrayList<Element> manaPool, ArrayList<Element> elements){
         for (Element element : elements){
-            useManaElement(element);
+            boolean success = useManaElement(element);
+            if(!success){
+                return false;
+            }
         }
+        return true;
     }
-    public void useManaElement(ArrayList<Element> elements){
-        useManaElement(manaPool, elements);
+    public boolean useManaElement(ArrayList<Element> elements){
+        return useManaElement(manaPool, elements);
     }
 
 

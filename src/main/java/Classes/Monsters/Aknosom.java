@@ -10,7 +10,7 @@ public class Aknosom extends MonsterCard {
     private static final int secondAttackDamage = 30;
 
     public Aknosom(Player owner) {
-        super("Aknosom", 60, Element.Fire, 2, 1, owner);
+        super("Aknosom", 2, 1, owner);
     }
 
     // 1st attack: Backward Kick
