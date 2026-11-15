@@ -14,7 +14,21 @@ public class Ajarakan extends MonsterCard {
         super("Ajarakan", owner);
     }
 
-    @Override
+    public int executeAttack(int attackNumber, Player target) {
+        switch (attackNumber) {
+            case 1:
+                return attack1(target.getActiveMonster());
+            case 2:
+                return attack2(target.getActiveMonster());
+            case 3:
+                return attack3(target.getActiveMonster());
+            default:
+                return -1;
+        }
+    }
+
+
+    
     public int attack1(MonsterCard enemy){
         ArrayList<String> attack = moves.get(0);
         String attackName =  attack.get(0);
@@ -31,7 +45,7 @@ public class Ajarakan extends MonsterCard {
         }
     }
 
-    @Override
+    
     public int attack2(MonsterCard enemy){
         ArrayList<String> attack = moves.get(1);
         String attackName =  attack.get(0);
@@ -49,7 +63,7 @@ public class Ajarakan extends MonsterCard {
         }
     }
 
-    @Override
+    
     public int attack3(MonsterCard enemy){
         ArrayList<String> attack = moves.get(2);
         String attackName =  attack.get(0);

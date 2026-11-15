@@ -13,7 +13,19 @@ public class Barioth extends MonsterCard {
         super("Barioth", owner);
     }
 
-    public int Attack1(MonsterCard enemy){
+    public int executeAttack(int attackNumber, Player target) {
+        switch (attackNumber) {
+            case 1:
+                return attack1(target.getActiveMonster());
+            case 2:
+                return attack2(target.getActiveMonster());
+            case 3:
+                return attack3(target.getActiveMonster());
+            default:
+                return -1;
+        }
+    }
+    public int attack1(MonsterCard enemy){
         ArrayList<String> attack = moves.get(0);
         String attackName =  attack.get(0);
         int attackDamage =  Integer.parseInt(attack.get(1));
@@ -29,7 +41,7 @@ public class Barioth extends MonsterCard {
         }
     }
 
-    public int Attack2(MonsterCard enemy){
+    public int attack2(MonsterCard enemy){
         ArrayList<String> attack = moves.get(1);
         String attackName =  attack.get(0);
         int attackDamage =  Integer.parseInt(attack.get(1));
@@ -45,7 +57,7 @@ public class Barioth extends MonsterCard {
         }
     }
 
-    public int Attack3(MonsterCard enemy){
+    public int attack3(MonsterCard enemy){
         ArrayList<String> attack = moves.get(2);
         String attackName =  attack.get(0);
         int attackDamage =  Integer.parseInt(attack.get(1));

@@ -13,7 +13,17 @@ public class Aknosom extends MonsterCard {
         super("Aknosom", owner);
     }
 
-    public int Attack1(MonsterCard enemy){
+    public int executeAttack(int attackNumber, Player target) {
+        switch (attackNumber) {
+            case 1:
+                return attack1(target.getActiveMonster());
+            case 2:
+                return attack2(target.getActiveMonster());
+            default:
+                return -1;
+        }
+    }
+    public int attack1(MonsterCard enemy){
         ArrayList<String> attack = moves.get(0);
         String attackName =  attack.get(0);
         int attackDamage =  Integer.parseInt(attack.get(1));
@@ -29,7 +39,7 @@ public class Aknosom extends MonsterCard {
         }
     }
 
-    public int Attack2(MonsterCard enemy){
+    public int attack2(MonsterCard enemy){
         ArrayList<String> attack = moves.get(1);
         String attackName =  attack.get(0);
         int attackDamage =  Integer.parseInt(attack.get(1));

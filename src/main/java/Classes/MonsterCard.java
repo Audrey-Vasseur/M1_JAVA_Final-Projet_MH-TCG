@@ -233,7 +233,7 @@ public abstract class MonsterCard extends Card {
             String input = scanner.nextLine();
             try {
                 answer = Integer.parseInt(input.trim());
-                if (answer < 1 || answer > moves.size()-1) {
+                if (answer < 1 || answer > moves.size()) {
                     throw new IllegalArgumentException("it must be between provided choices");
                 }
             } catch (IllegalArgumentException e) {
@@ -243,33 +243,7 @@ public abstract class MonsterCard extends Card {
         }while(answer == -1);
         return answer;
     }
-    protected int attack1(MonsterCard enemy){
-        System.out.println("Attack 1");
-        return 0;
-    }
-    protected int attack2(MonsterCard enemy){
-        return 0;
-    }
-    protected int attack3(MonsterCard enemy){
-        return 0;
-    }
-    protected int attack4(MonsterCard enemy){
-        return 0;
-    }
-    protected int executeAttack(int attackNumber, Player target){
-        switch (attackNumber){
-            case 1:
-                return attack1(target.getActiveMonster());
-            case 2:
-                return attack2(target.getActiveMonster());
-            case 3:
-                return attack3(target.getActiveMonster());
-            case 4:
-                return attack4(target.getActiveMonster());
-            default:
-                return -1;
-        }
-    }
+    public abstract int executeAttack(int attackNumber, Player target);
 
     @Override
     public String toString() {

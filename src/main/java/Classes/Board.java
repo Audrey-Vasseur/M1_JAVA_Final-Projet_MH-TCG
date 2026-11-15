@@ -25,10 +25,10 @@ public class Board {
         give a random element
         check effects affecting the monsters (if any)
      */
-    public int startTurn(Player player, Player target){
+    public void startTurn(Player player, Player target){
         player.drawCard();
         giveRandomElement(player);
-        return doPlayerChoice(player, target);
+        System.out.println(player.getManaPool());
     }
 
     /*
@@ -209,9 +209,7 @@ public class Board {
         }while(answer == -1);
         answer--;
         if(player.getHand().get(answer) instanceof MonsterCard){
-            System.out.println("Essaye de mettre dans le board");
             if(player.handToBoard(answer)){
-
                 return 1;
             }
             return -1;
@@ -231,14 +229,20 @@ public class Board {
     }
 
     public int doPlayerChoice(Player player, Player target){
-        System.out.println("What do you want to do?\n 1- Attack with " + player.getActiveMonster() + " | 2- Hand");
+        System.out.println("What do you want to do?\n 1- Attack with " + player.getActiveMonster() + " | 2- Hand  | 3- Skip turn");
         int answer = -1;
         do{
             String input = scanner.nextLine();
             try {
                 answer = Integer.parseInt(input.trim());
-                if (answer < 1 || answer > 2) {
+                if (answer < 1 || answer > 3) {
                     throw new IllegalArgumentException("It must be between provided choices");
+                }
+                if(answer == 1 && player.getBoard().getFirst() == null){
+                    throw new IllegalArgumentException("You have no active Monster");
+                }
+                if(answer == 3 && player.getBoard().getFirst() == null){
+                    throw new IllegalArgumentException("You need an active Monster");
                 }
             } catch (IllegalArgumentException e) {
                 System.out.println("Invalid input: " + e.getMessage());
@@ -247,8 +251,10 @@ public class Board {
         }while(answer == -1);
         if(answer == 1){
             return player.getActiveMonster().executeAttack(player.getActiveMonster().chooseAttack(scanner), target);
-        }else{
+        }else if (answer == 2){
             return showHand(player);
+        }else{
+            return 1;
         }
     }
 }

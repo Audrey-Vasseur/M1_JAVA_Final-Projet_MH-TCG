@@ -152,6 +152,7 @@ public class Player {
     public boolean handToBoard(int index){
         int idxOfNull = board.indexOf(null);
         if(idxOfNull != -1){
+            System.out.println(hand.get(index)+" was successfully added to the board");
             board.set(idxOfNull,hand.remove(index));
             return true;
         }
@@ -168,7 +169,7 @@ public class Player {
         if(!deck.isEmpty()) {
             Card drawnCard = deck.removeFirst();
             hand.add(drawnCard);
-            System.out.println("You draw: "+ drawnCard.getClass().getName());
+            System.out.println("You draw: "+ drawnCard);
         }
     }
 

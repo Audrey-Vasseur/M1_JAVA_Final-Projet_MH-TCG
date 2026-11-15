@@ -57,15 +57,17 @@ public class Main {
                 System.out.println("\n\n------- ROUND "+ turnNumber + " ------ ");
                 playerHasPlayed = false;
                 System.out.println("- " + players.getFirst().getName() + " -");
+                board.startTurn(players.getFirst(),players.getLast());
                 do{
-                    if(board.startTurn(players.getFirst(),players.getLast()) != -1){
+                    if(board.doPlayerChoice(players.getFirst(), players.getLast()) != -1){;
                         playerHasPlayed = true;
                     };
                 }while(!playerHasPlayed);
                 playerHasPlayed = false;
                 System.out.println("\n\n- " + players.getLast().getName() + " -");
+                board.startTurn(players.getLast(),players.getFirst());
                 do{
-                    if(board.startTurn(players.getLast(),players.getFirst()) != -1){
+                    if(board.doPlayerChoice(players.getLast(), players.getFirst()) != -1){;
                         playerHasPlayed = true;
                     };
                 }while(!playerHasPlayed);
