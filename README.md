@@ -56,6 +56,7 @@ Once you clone the repository, go to the Main file. Click on the green arrow and
 <details>
 <summary>More informations below</summary>
 <br>
+  
 | Classes     | Description                         |
 |-------------|-------------------------------------|
 | Main        | Game loop                           |
@@ -125,7 +126,9 @@ The data here is stored inside a csv file: cards_output.csv.
 <br>
 Each line represents a Monster and inside a line, data are separated with "," and "/" for som attributes.
 <br>
+<br>
 The attributes are the following, in this order:
+  
 | Attributes  | Types                        |
 |-------------|------------------------------|
 | subname     | String                       |
