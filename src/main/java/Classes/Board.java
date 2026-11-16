@@ -142,7 +142,7 @@ public class Board {
                 spot =-2;
             }
         }while(spot == -2);
-        return spot;
+        return --spot;
     }
 
     public String boardToString(Player player, boolean Active, boolean Bench){

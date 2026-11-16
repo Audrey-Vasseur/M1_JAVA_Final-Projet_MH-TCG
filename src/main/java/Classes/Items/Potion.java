@@ -22,6 +22,6 @@ public class Potion extends ItemCard{
     }
     @Override
     public String toString() {
-        return "Potion : Heal your Active Monster for 20hp\n";
+        return "Potion : Heal one of your Benched Monster for 20hp\n";
     }
 }
